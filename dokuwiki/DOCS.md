@@ -34,6 +34,20 @@ array disables forwarded-header trust. The proxy must replace client-supplied
 forwarding headers. Match its upload/request limit to at least the add-on's 40 MiB
 request limit when using 32 MiB uploads.
 
+## Namespace permissions
+
+ACLPlusRegex is enabled with the maintained rules in
+`/share/dokuwiki/conf/aclplusregex.conf`. It runs BEFORE core ACL checks and also
+handles anonymous visitors. Matching rules take precedence over the base policy
+selected in the installer: public/wiki namespaces and public user media are
+readable anonymously; non-guest users can manage their own namespace; guests are
+excluded from private user namespaces. Group-based namespace rules are included.
+
+Review the complete rules file before relying on a closed-wiki installer policy.
+Both this file and the plugin settings remain editable and persist on updates.
+The defaults are seeded only for a new installation; existing installations are
+not automatically given different access permissions.
+
 ## Updates and storage
 
 The maintainer ships core, template and plugin updates together. Packaged code is

@@ -22,7 +22,7 @@ def docker(*args, stdin=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--image', default='hassio-dokuwiki:0.1.0')
+    parser.add_argument('--image', default='hassio-dokuwiki:0.1.1')
     args = parser.parse_args()
     name = 'dokuwiki-smoke-' + uuid.uuid4().hex[:10]
     volume = name + '-share'
@@ -92,7 +92,7 @@ def main():
         raise AssertionError('Container did not become ready')
 
     def fingerprint():
-        return json.loads(php('''$files = ['conf/local.php', 'conf/users.auth.php', 'conf/acl.auth.php',
+        return json.loads(php('''$files = ['conf/local.php', 'conf/users.auth.php', 'conf/acl.auth.php', 'conf/aclplusregex.conf',
             'data/pages/release_test.txt', 'data/media/release-test.png'];
             $hashes = []; foreach ($files as $file) $hashes[$file] = hash_file('sha256', '/share/dokuwiki/'.$file);
             echo json_encode($hashes);'''))
@@ -115,6 +115,28 @@ def main():
         check(request('/install.php')[0] == 404, 'installer disabled after setup')
         status, _, page = request('/')
         check(status == 200 and b'Release smoke wiki' in page and b'bootstrap3' in page, 'Bootstrap3 page renders')
+        settings = json.loads(php("$p=plugin_load('action','aclplusregex'); echo json_encode([$p->getConf('run'),(int)$p->getConf('anonymous'),is_file(DOKU_CONF.'aclplusregex.conf')]);"))
+        check(settings == ['BEFORE', 1, True], 'ACLPlusRegex rules and settings are seeded')
+        acl_cases = [
+            ['public:start', '', [], 1],
+            ['wiki:logo.png', '', [], 1],
+            ['user:alice:private:start', 'alice', ['user'], 16],
+            ['user:alice:private:start', 'bob', ['user'], 0],
+            ['user:guestone:private:start', 'guestone', ['guest'], 0],
+            ['user:guestboth:private:start', 'guestboth', ['user', 'guest'], 0],
+            ['user:alice:public:avatar.png', '', [], 1],
+            ['user:alice:share:start', 'guestone', ['guest'], 1],
+            ['playground:test', 'alice', ['user'], 16],
+            ['playground:test', 'guestone', ['guest'], 0],
+            ['lab:start', 'member', ['user', 'lab'], 16],
+            ['lab:private:test', 'member', ['user', 'lab'], 0],
+            ['lab:private:test', 'staff', ['user', 'lab_staff'], 1],
+            ['lab:private:test', 'manager', ['user', 'lab_admin'], 16],
+        ]
+        encoded = base64.b64encode(json.dumps(acl_cases).encode()).decode()
+        permissions = json.loads(php("$cases=json_decode(base64_decode('" + encoded + "'),true); $result=[]; foreach($cases as [$id,$user,$groups,$expected]){$result[]=auth_aclcheck($id,$user,$groups);} echo json_encode($result);"))
+        check(permissions == [case[3] for case in acl_cases], 'public, personal, guest and group namespace permissions match the rules')
+
         login_page = request('/doku.php?do=login')[2]
         login = {'id': 'start', 'do': 'login', 'u': 'releaseadmin', 'p': password}
         match = re.search(rb'name="sectok"[^>]*value="([^"]+)"', login_page)
@@ -187,6 +209,12 @@ def main():
         # Request generated assets to exercise PHP/LESS/JS caches too.
         status, _, body = request('/lib/exe/css.php?t=bootstrap3')
         check(status == 200 and len(body) > 10000, 'template CSS compiles')
+        css = body.decode()
+        check(all(rule in css for rule in ['body.vanilla-pro #dw__navbar > .dw-container',
+              'mjx-container.MathJax[display="true"]', '.wrap_border']), 'shared presentation styles ship in the template')
+        check('margin-top:110px !important' not in css and not re.search(
+              r'[^{}]*\.CodeMirror-scroll[^{}]*\{[^}]*padding-bottom:0\s*!important', css),
+              'legacy navbar and CodeMirror overrides are absent')
         status, _, body = request('/lib/exe/js.php?t=bootstrap3')
         check(status == 200 and len(body) > 10000, 'combined JavaScript builds')
         before = fingerprint()
@@ -198,6 +226,15 @@ def main():
         docker('rm', name)
         start(volume)
         check(fingerprint() == before and approval() == approved, 'container replacement preserves settings/pages/media/approval')
+        # Removing an optional owner configuration must not cause startup to reseed it.
+        php("if(!rename(DOKU_CONF.'aclplusregex.conf','/share/dokuwiki/aclplusregex.test-backup'))throw new RuntimeException('Cannot stage rules');")
+        docker('stop', name)
+        docker('rm', name)
+        start(volume)
+        check(php("echo (int)file_exists(DOKU_CONF.'aclplusregex.conf');") == '0',
+              'existing installations do not acquire new seed ACL rules on startup')
+        php("if(!rename('/share/dokuwiki/aclplusregex.test-backup',DOKU_CONF.'aclplusregex.conf'))throw new RuntimeException('Cannot restore rules');")
+
         docker('stop', name)
         docker('rm', name)
         start(restored)

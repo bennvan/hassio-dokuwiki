@@ -1,7 +1,7 @@
 # DokuWiki for Home Assistant
 
 DokuWiki Mort with a maintained Bootstrap3 template and 43 additional plugins,
-packaged as a Home Assistant add-on for amd64 PCs/VMs. Version **0.1.0** builds and
+packaged as a Home Assistant add-on for amd64 PCs/VMs. Version **0.1.1** builds and
 passes the local Docker smoke tests. Installation under Home Assistant Supervisor
 still needs its first platform test.
 
@@ -67,8 +67,13 @@ and code updates cannot complete because those paths are read-only to PHP. The
 core upgrade plugin is disabled. Code updates are shipped as add-on releases.
 
 Initial settings are a reviewed, generic subset in `dokuwiki/seeds/`, not a copy
-of development `conf/`. Personal interwiki links, custom access rules and other
-site-specific settings are not carried over. Owners manage their settings through
+of development `conf/`. Shared presentation styles live in the template; no
+`userstyle.css` is seeded. Owners can add that file for their own overrides.
+The initial configuration includes the maintained ACLPlusRegex rules for public,
+personal and group namespaces, running BEFORE core ACL checks and for anonymous
+visitors too. Matching regex rules take precedence over the installer's base ACL
+policy. Review `conf/aclplusregex.conf` when choosing access permissions. Personal
+interwiki links and other site-specific settings are not carried over. Owners manage their settings through
 DokuWiki after setup. PHP allows 32 MiB per uploaded file; Nginx accepts 40 MiB
 requests to leave room for form data.
 
@@ -112,7 +117,7 @@ review. Bundled components retain their licences and attribution in the image.
 python3 -B -m unittest discover -s tests -v
 python3 dokuwiki/tools/sources.py check-release
 docker compose build
-python3 -B tests/smoke.py --image hassio-dokuwiki:0.1.0
+python3 -B tests/smoke.py --image hassio-dokuwiki:0.1.1
 ```
 
 The smoke test creates synthetic accounts/content in temporary Docker volumes and

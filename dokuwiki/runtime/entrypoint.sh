@@ -12,6 +12,9 @@ fi
 # Project image defaults there without copying them over local user settings.
 for source in /opt/dokuwiki-defaults/conf/*; do
     [ -f "$source" ] || continue
+    # First-install overrides are owner configuration, not shipped core defaults.
+    # Never introduce a new seed (especially ACL rules) into an existing wiki.
+    [ -e "/opt/dokuwiki-seed/conf/$(basename "$source")" ] && continue
     target="/share/dokuwiki/conf/$(basename "$source")"
     if [ ! -e "$target" ] && [ ! -L "$target" ]; then
         ln -s "$source" "$target"

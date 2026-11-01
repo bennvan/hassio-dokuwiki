@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.1 — 2026-11-02
+
+- Include the maintained ACLPlusRegex rules as first-install defaults, with
+  BEFORE mode and anonymous processing enabled. Existing ACL settings persist.
+
+- Move Vanilla Pro wide-screen spacing, display-equation scrolling and Wrap border
+  styling into the Bootstrap3 template; no custom user stylesheet is seeded.
+- Scope navbar spacing to Vanilla Pro and equation scrolling to display math.
+
+Existing installations retain their own `conf/userstyle.css`. If an early local
+preview contains the previous stylesheet, remove its migrated/obsolete rules once
+after updating; an add-on update does not overwrite user customisations.
+
 ## 0.1.0 — 2026-11-02
 
 - Initial amd64 Home Assistant package: DokuWiki 2026-07-14c Mort, Bootstrap3 and
