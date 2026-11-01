@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.3 — 2026-11-02
+
+- Set the wiki base directory explicitly so cached Iconify responses use the
+  correct internal X-Accel-Redirect path instead of returning a missing page.
+- Keep edit/preview request bodies up to 1 MB in memory. Larger uploads can
+  still use Nginx temporary files without affecting the upload limit.
+- Restore FastCGI response buffering to coalesce early template output with
+  rendered content, reducing the empty-template flash during previews.
+- Add regression checks for fresh/cached icons and full syntax-page previews.
+
 ## 0.1.2 — 2026-11-02
 
 - Upgrade PHP-FPM from 8.5.4 to 8.5.12 and pin the updated official image digest.

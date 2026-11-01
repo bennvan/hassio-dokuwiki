@@ -22,7 +22,7 @@ def docker(*args, stdin=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--image', default='hassio-dokuwiki:0.1.2')
+    parser.add_argument('--image', default='hassio-dokuwiki:0.1.3')
     args = parser.parse_args()
     name = 'dokuwiki-smoke-' + uuid.uuid4().hex[:10]
     volume = name + '-share'
@@ -144,6 +144,28 @@ def main():
         if match: login['sectok'] = match.group(1).decode()
         status, _, page = request('/doku.php', fields=login)
         check(status == 200 and b'do=logout' in page, 'owner can log in')
+        # A second Iconify request exercises X-Accel-Redirect, unlike a cache miss.
+        icon_url = '/lib/tpl/bootstrap3/iconify.php?icon=mdi-email.svg&color=%23123456'
+        status, headers, icon = request(icon_url, anonymous=True)
+        check(status == 200 and 'image/svg+xml' in headers.get('Content-Type', '') and b'<svg' in icon,
+              'fresh Iconify response is SVG')
+        status, headers, cached_icon = request(icon_url, anonymous=True)
+        check(status == 200 and 'image/svg+xml' in headers.get('Content-Type', '') and cached_icon == icon,
+              'cached Iconify response uses the correct internal cache path')
+        validator = {'If-None-Match': headers['ETag']} if headers.get('ETag') else {'If-Modified-Since': headers['Last-Modified']}
+        status, _, body = request(icon_url, headers=validator, anonymous=True)
+        check(status == 304 and not body, 'unchanged cached icon returns 304')
+
+        syntax = php("echo file_get_contents(wikiFN('wiki:syntax'));")
+        edit = request('/doku.php?id=wiki:syntax&do=edit')[2]
+        warnings_before = docker('logs', name).count('a client request body is buffered')
+        status, _, preview = request('/doku.php', fields={'id': 'wiki:syntax', 'do[preview]': 'Preview',
+            'sectok': token(edit), 'wikitext': syntax})
+        check(status == 200 and b'id="preview"' in preview and b'</html>' in preview,
+              'full syntax-page preview renders successfully')
+        check(docker('logs', name).count('a client request body is buffered') == warnings_before,
+              'normal syntax preview stays within the request memory buffer')
+
         edit = request('/doku.php?id=release_test&do=edit')[2]
         status, _, page = request('/doku.php', fields={'id': 'release_test', 'do[save]': 'Save',
             'sectok': token(edit), 'wikitext': '====== Release fixture ======\n\nPersistent content.\n',
