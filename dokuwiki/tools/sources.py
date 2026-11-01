@@ -147,13 +147,14 @@ def prepare(wiki, archive, output):
 
 
 def finalize(output):
-    # Use only the core's generic seed pages/media, never the development data.
+    # Use core and reviewed starter pages/media, never the development data.
     # Replace template-bundled branding in this generated tree, not the source repo.
     for name in ('logo.png', 'favicon.ico', 'apple-touch-icon.png'):
         shutil.copyfile(output / 'lib/tpl/dokuwiki/images' / name,
                         output / 'lib/tpl/bootstrap3/images' / name)
     shutil.copyfile(ADDON / 'seeds/install.conf', output / 'install.conf')
     shutil.copytree(ADDON / 'seeds/conf', output / 'conf', dirs_exist_ok=True)
+    shutil.copytree(ADDON / 'seeds/data', output / 'data', dirs_exist_ok=True)
     (output / 'data/pages/start.txt').write_text(
         '====== Welcome to DokuWiki ======\n\n'
         'Your wiki is ready. Edit this page to get started.\n\n'

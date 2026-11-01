@@ -1,0 +1,19 @@
+~~NOPAGEINFO~~
+
+<jumbotron>
+<WRAP centeralign>
+{{icon>emojione:face-with-head-bandage?100}}
+====== 404 Not Found ======
+The page you have requested does not exist.
+
+<button type="info" icon="fa:home" link=":start">Site Home</button>
+\\ \\
+<wrapper style="display:none" id="notfound_create_page_btn">
+<sub>It looks like you have permission to create a page here.</sub>
+
+
+<btn type="success" icon="fa:plus" href="?do=edit"> Create Page</btn>
+</wrapper>
+
+</WRAP>
+</jumbotron>

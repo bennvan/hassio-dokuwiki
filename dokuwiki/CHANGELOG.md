@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Include the editable custom 404 page in starter content for new installations.
+  Existing installations can copy it manually to `data/pages/404.txt`; updates
+  continue to preserve all existing wiki content.
+
 ## 0.1.3 — 2026-11-02
 
 - Set the wiki base directory explicitly so cached Iconify responses use the

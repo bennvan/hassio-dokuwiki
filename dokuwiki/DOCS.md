@@ -48,6 +48,18 @@ Both this file and the plugin settings remain editable and persist on updates.
 The defaults are seeded only for a new installation; existing installations are
 not automatically given different access permissions.
 
+## Custom 404 page
+
+New installations include an editable `404` wiki page used by the NotFound plugin.
+Edit that page through the wiki to customise the missing-page message. The
+Bootstrap3 template shows its Create Page button when the visitor can create the
+requested page.
+
+For an existing installation created without this page, copy
+`dokuwiki/seeds/data/pages/404.txt` from this repository to
+`/share/dokuwiki/data/pages/404.txt` once, if that page does not already exist.
+Updates do not add or overwrite pages in existing installations.
+
 ## Updates and storage
 
 The maintainer ships core, template and plugin updates together. Packaged code is
