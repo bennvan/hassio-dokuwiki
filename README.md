@@ -1,11 +1,11 @@
 # DokuWiki for Home Assistant
 
 DokuWiki Mort with a maintained Bootstrap3 template and 43 additional plugins,
-packaged as a Home Assistant add-on for amd64 PCs/VMs. Version **0.1.1** builds and
+packaged as a Home Assistant add-on for amd64 PCs/VMs. Version **0.1.2** builds and
 passes the local Docker smoke tests. Installation under Home Assistant Supervisor
 still needs its first platform test.
 
-The runtime uses Nginx, PHP-FPM 8.5.4, SQLite and X-Accel-Redirect. It serves HTTP
+The runtime uses Nginx, PHP-FPM 8.5.12, SQLite and X-Accel-Redirect. It serves HTTP
 on a separate port (8080 by default); it does not use Home Assistant ingress.
 
 ## Install on Home Assistant
@@ -117,7 +117,7 @@ review. Bundled components retain their licences and attribution in the image.
 python3 -B -m unittest discover -s tests -v
 python3 dokuwiki/tools/sources.py check-release
 docker compose build
-python3 -B tests/smoke.py --image hassio-dokuwiki:0.1.1
+python3 -B tests/smoke.py --image hassio-dokuwiki:0.1.2
 ```
 
 The smoke test creates synthetic accounts/content in temporary Docker volumes and

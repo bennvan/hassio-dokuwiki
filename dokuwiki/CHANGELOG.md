@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.2 — 2026-11-02
+
+- Upgrade PHP-FPM from 8.5.4 to 8.5.12 and pin the updated official image digest.
+  This addresses PHP2Shell (CVE-2026-109618 and CVE-2026-109619).
+- Reject older PHP runtimes during the image build and check the running version
+  in the container smoke test.
+- Existing wiki content, accounts, settings and approval databases remain on Share.
+  Install this update and restart the add-on to replace the old PHP workers.
+
+Security references: [PHP 8.5.12 changelog](https://www.php.net/ChangeLog-8.php#8.5.12),
+[OOM advisory](https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w),
+[stale-state advisory](https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp).
+
 ## 0.1.1 — 2026-11-02
 
 - Include the maintained ACLPlusRegex rules as first-install defaults, with

@@ -22,7 +22,7 @@ def docker(*args, stdin=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--image', default='hassio-dokuwiki:0.1.1')
+    parser.add_argument('--image', default='hassio-dokuwiki:0.1.2')
     args = parser.parse_args()
     name = 'dokuwiki-smoke-' + uuid.uuid4().hex[:10]
     volume = name + '-share'
@@ -103,6 +103,7 @@ def main():
 
     try:
         start(volume)
+        check(int(php('echo PHP_VERSION_ID;')) >= 80512, 'PHP runtime includes the PHP2Shell fixes')
         status, _, page = request('/')
         check(status == 200 and b'name="d[superuser]"' in page, 'fresh root opens installer')
         check(b'name="d[license]"' in page, 'installer reads shipped configuration')

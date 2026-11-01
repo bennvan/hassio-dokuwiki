@@ -7,7 +7,7 @@ COPY seeds/ seeds/
 RUN --mount=type=cache,target=/archive-cache \
     python tools/sources.py assemble --archive-cache /archive-cache --output /wiki
 
-FROM php:8.5.4-fpm-bookworm@sha256:d51709667ca92ee9a5e262ade966d6d7b2ea3546d3763c7537719b09a3d2ea8d AS runtime
+FROM php:8.5.12-fpm-bookworm@sha256:75dc898a8861a777f14c57b2afbb811a848735701593cbc354e4194807a88f3e AS runtime
 RUN apt-get update \
     && apt-get install -y --no-install-recommends nginx supervisor util-linux \
        libjpeg62-turbo-dev libpng-dev libwebp-dev libfreetype6-dev libzip-dev libicu-dev \
@@ -35,7 +35,7 @@ RUN mkdir -p /opt/dokuwiki-defaults \
     && chmod -R go-w /var/www/html /opt/dokuwiki-defaults
 LABEL org.opencontainers.image.title="DokuWiki for Home Assistant" \
       org.opencontainers.image.source="https://github.com/bennvan/hassio-dokuwiki" \
-      org.opencontainers.image.version="0.1.1"
+      org.opencontainers.image.version="0.1.2"
 EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=5s CMD curl -fsS http://127.0.0.1:8080/healthz || exit 1
 ENTRYPOINT ["/opt/dokuwiki-runtime/entrypoint.sh"]
