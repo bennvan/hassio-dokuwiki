@@ -1,0 +1,23 @@
+name: DokuWiki
+description: DokuWiki with Bootstrap3 and curated plugins
+version: 0.1.0
+slug: dokuwiki
+url: https://github.com/bennvan/hassio-dokuwiki
+arch:
+  - amd64
+startup: application
+boot: auto
+init: true
+ingress: false
+ports:
+  8080/tcp: 8080
+ports_description:
+  8080/tcp: DokuWiki web interface
+webui: http://[HOST]:[PORT:8080]
+map:
+  - type: share
+    read_only: false
+options: {}
+schema: {}
+# Share is backed up separately; cold mode alone does not coordinate its snapshot.
+backup: cold

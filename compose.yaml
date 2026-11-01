@@ -1,0 +1,14 @@
+services:
+  wiki:
+    build:
+      context: ./dokuwiki
+    image: hassio-dokuwiki:0.1.0
+    ports:
+      - "127.0.0.1:8081:8080"
+    volumes:
+      - wiki-share:/share
+    restart: unless-stopped
+    stop_grace_period: 40s
+
+volumes:
+  wiki-share:

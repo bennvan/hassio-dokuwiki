@@ -1,0 +1,9 @@
+**
+!Dockerfile
+!tools/
+!tools/sources.py
+!sources.inventory.json
+!seeds/
+!seeds/**
+!runtime/
+!runtime/**

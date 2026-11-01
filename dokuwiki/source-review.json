@@ -1,0 +1,178 @@
+[
+  {
+    "component": "aclplusregex",
+    "result": "verified"
+  },
+  {
+    "component": "advanced",
+    "result": "verified"
+  },
+  {
+    "component": "approve",
+    "result": "verified"
+  },
+  {
+    "component": "bootswrapper",
+    "result": "verified"
+  },
+  {
+    "component": "bureaucracy",
+    "result": "verified"
+  },
+  {
+    "component": "changes",
+    "result": "verified"
+  },
+  {
+    "component": "clearhistory",
+    "result": "verified"
+  },
+  {
+    "component": "codehighlightjs",
+    "result": "verified"
+  },
+  {
+    "component": "codemirror",
+    "result": "verified"
+  },
+  {
+    "component": "codemirrorsyntax",
+    "result": "verified"
+  },
+  {
+    "component": "commentsyntax",
+    "result": "verified"
+  },
+  {
+    "component": "confmanager",
+    "result": "verified"
+  },
+  {
+    "component": "csv",
+    "result": "verified"
+  },
+  {
+    "component": "datatables",
+    "result": "verified"
+  },
+  {
+    "component": "diagrams",
+    "result": "verified"
+  },
+  {
+    "component": "diffpreview",
+    "result": "verified"
+  },
+  {
+    "component": "edittable",
+    "result": "verified"
+  },
+  {
+    "component": "gallery",
+    "result": "verified"
+  },
+  {
+    "component": "icons",
+    "result": "verified"
+  },
+  {
+    "component": "iframe",
+    "result": "verified"
+  },
+  {
+    "component": "include",
+    "result": "verified"
+  },
+  {
+    "component": "instantpage",
+    "result": "verified"
+  },
+  {
+    "component": "latexcaption",
+    "result": "verified"
+  },
+  {
+    "component": "loglog",
+    "result": "verified"
+  },
+  {
+    "component": "mathjax",
+    "result": "verified"
+  },
+  {
+    "component": "mcp",
+    "result": "verified"
+  },
+  {
+    "component": "meta",
+    "result": "verified"
+  },
+  {
+    "component": "move",
+    "result": "verified"
+  },
+  {
+    "component": "notfound",
+    "result": "verified"
+  },
+  {
+    "component": "nspages",
+    "result": "verified"
+  },
+  {
+    "component": "numberedheadings",
+    "result": "verified"
+  },
+  {
+    "component": "pagelist",
+    "result": "verified"
+  },
+  {
+    "component": "pageredirect",
+    "result": "verified"
+  },
+  {
+    "component": "qrcodephp",
+    "result": "verified"
+  },
+  {
+    "component": "searchindex",
+    "result": "verified"
+  },
+  {
+    "component": "smtp",
+    "result": "verified"
+  },
+  {
+    "component": "sqlite",
+    "result": "verified"
+  },
+  {
+    "component": "tag",
+    "result": "verified"
+  },
+  {
+    "component": "templatepagename",
+    "result": "verified"
+  },
+  {
+    "component": "threejs",
+    "result": "verified"
+  },
+  {
+    "component": "upgrade",
+    "result": "verified"
+  },
+  {
+    "component": "vshare",
+    "result": "verified"
+  },
+  {
+    "component": "wrap",
+    "result": "verified"
+  },
+  {
+    "component": "bootstrap3",
+    "result": "verified"
+  }
+]

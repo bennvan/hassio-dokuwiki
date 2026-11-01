@@ -1,0 +1,457 @@
+{
+  "schema": 1,
+  "sources_verified": true,
+  "core": {
+    "version": "2026-07-14c",
+    "url": "https://github.com/dokuwiki/dokuwiki/releases/download/release-2026-07-14c/dokuwiki-2026-07-14c.tgz",
+    "sha256": "7e9b4dcb5ecb91a57f71b9b77dcec7bcf929959881464796611349ed1d183176"
+  },
+  "components": [
+    {
+      "path": "lib/plugins/aclplusregex",
+      "tree_sha256": "6defda1b1165067882442da022a7ae884af33e7443acc02e3e3d582d51fd9e5b",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-aclplusregex.git",
+      "commit": "e23b50ec53c5b8e2d2b0a34f1c441b58cef61a32",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-aclplusregex/zipball/e23b50ec53c5b8e2d2b0a34f1c441b58cef61a32",
+      "archive_sha256": "74e0b94fcbe3764013b24e5f6360a3b711f1a873e7fd205773a5c8a89c6481a4"
+    },
+    {
+      "path": "lib/plugins/advanced",
+      "tree_sha256": "1e31e858d4a8365beb2e72ba891e1beb63f47087abb235e7599ac2e2c232399e",
+      "source_hint": "https://github.com/giterlizzi/dokuwiki-plugin-advanced/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/giterlizzi/dokuwiki-plugin-advanced/zipball/ce058268e8e4877b9d99c3fa6f72676b6662fd80",
+      "archive_sha256": "34a519e4f79f107021ded7ab98d0f3710bf1946955ed96d88ceb590b0278744b",
+      "repository": "https://github.com/giterlizzi/dokuwiki-plugin-advanced.git",
+      "commit": "ce058268e8e4877b9d99c3fa6f72676b6662fd80"
+    },
+    {
+      "path": "lib/plugins/approve",
+      "tree_sha256": "fbd83f395be668b6a753ba935ff178a4de2ce729c0d0dcd1fbea9088b920c071",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-approve.git",
+      "commit": "e4299f1a8a24466f1f62d02551ea41e6e2e1ed5f",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-approve/zipball/e4299f1a8a24466f1f62d02551ea41e6e2e1ed5f",
+      "archive_sha256": "1820fb5c4cec4bb46e98b92e7cd81cdbaba1c9dace6f34167058176d880b5158"
+    },
+    {
+      "path": "lib/plugins/bootswrapper",
+      "tree_sha256": "015dc672c08c7250af94aaad77c5de6e201644c467834881d577b4beb48f12a4",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-bootswrapper.git",
+      "commit": "5ecbf1229dcb56684fd570e89be2a25b49783e30",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/5ecbf1229dcb56684fd570e89be2a25b49783e30",
+      "archive_sha256": "ca4fc865c1d55c9e8cec845d23f5e9f0dae5086db476bd3c551cc2c072267b3e"
+    },
+    {
+      "path": "lib/plugins/bureaucracy",
+      "tree_sha256": "f90b599ee86b8e982f0783397fec39aa56eb0b936ee0446e6b71019a464d1463",
+      "source_hint": "https://github.com/splitbrain/dokuwiki-plugin-bureaucracy/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/splitbrain/dokuwiki-plugin-bureaucracy/zipball/a6dcea78ba99ad92225ad9c1e381aac2aceb01cf",
+      "archive_sha256": "074f6efe65eff4aba6e526d00c612531ee7ff9299434a18af3b95e3a32e76c34",
+      "repository": "https://github.com/splitbrain/dokuwiki-plugin-bureaucracy.git",
+      "commit": "a6dcea78ba99ad92225ad9c1e381aac2aceb01cf"
+    },
+    {
+      "path": "lib/plugins/changes",
+      "tree_sha256": "98584c257c815e28b8cf7e0759e62c4bb50e23fea10a7453bcde04729e9699a4",
+      "source_hint": "https://github.com/cosmocode/changes/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/cosmocode/changes/zipball/de8bfdb3ac991a2702e441f6bbec6f422cab92a1",
+      "archive_sha256": "e632c37090790490d4b145cec43ef953cbe31db1acfeda9cebe5e08b21a0c675",
+      "repository": "https://github.com/cosmocode/changes.git",
+      "commit": "de8bfdb3ac991a2702e441f6bbec6f422cab92a1"
+    },
+    {
+      "path": "lib/plugins/clearhistory",
+      "tree_sha256": "d53a4f6c47342b05b5f6ae9587709e3595e7d53c1566fae2d9a87da3f75426a8",
+      "source_hint": "https://github.com/cosmocode/clearhistory/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/cosmocode/clearhistory/zipball/26abe2a2ba46d58d3d51f8b2f6336705957f19c9",
+      "archive_sha256": "eeab39fba3f61482b1907057de47e6ded26f72211955ed1a8b7817fa32ffa3e9",
+      "repository": "https://github.com/cosmocode/clearhistory.git",
+      "commit": "26abe2a2ba46d58d3d51f8b2f6336705957f19c9"
+    },
+    {
+      "path": "lib/plugins/codehighlightjs",
+      "tree_sha256": "6da3777c39a88f5b47085cceab1bd74390f35b97078278a2c240237f187d410d",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-highlightjs.git",
+      "commit": "0a5b95ea4909f77c777a97dfc81c7a91333a2d24",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-highlightjs/zipball/0a5b95ea4909f77c777a97dfc81c7a91333a2d24",
+      "archive_sha256": "82b91962681cecea392f7c8306fc9b4eee844a76dc3e3cdc4a908c0fa7f7aab1"
+    },
+    {
+      "path": "lib/plugins/codemirror",
+      "tree_sha256": "0dd5da0272d347c057bbccb029c552a9dffb6cc63699b6ff261a845ff5477ed1",
+      "source_hint": "https://github.com/cosmocode/dokuwiki-plugin-codemirror/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/cosmocode/dokuwiki-plugin-codemirror/zipball/9e175aa1b945a2d814e9296c1ad34f47e95a3f71",
+      "archive_sha256": "a69ed6d14849f1ed15d7e93a0dfde8eed782df7e6832b120840ea25ec2d94ad2",
+      "repository": "https://github.com/cosmocode/dokuwiki-plugin-codemirror.git",
+      "commit": "9e175aa1b945a2d814e9296c1ad34f47e95a3f71"
+    },
+    {
+      "path": "lib/plugins/codemirrorsyntax",
+      "tree_sha256": "65d57f04531d6f6dc3bbe936715ccd171434645e7abf297fa4b6541f10e7cf71",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-codemirrorsyntax.git",
+      "commit": "f10fc92a6b542ec3f25ba6826f6911adc3ff9dc2",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-codemirrorsyntax/zipball/f10fc92a6b542ec3f25ba6826f6911adc3ff9dc2",
+      "archive_sha256": "a0ca98494d5277993b424a50686c097db9969d2661d2e896f20d946bd5a43d72"
+    },
+    {
+      "path": "lib/plugins/commentsyntax",
+      "tree_sha256": "744253a9bed35ee8b95d853441330e291c97efb4e9e1bf41140433e7971ade36",
+      "source_hint": "https://github.com/ssahara/dw-plugin-commentsyntax/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/ssahara/dw-plugin-commentsyntax/zipball/df4d37db112f092e48ee3b631a83c16bb7153c09",
+      "archive_sha256": "24e7a6ecbc1d7d1cdb87cf02f0eb867c7567a04edc3c9b598368cc6b141712b1",
+      "repository": "https://github.com/ssahara/dw-plugin-commentsyntax.git",
+      "commit": "df4d37db112f092e48ee3b631a83c16bb7153c09"
+    },
+    {
+      "path": "lib/plugins/confmanager",
+      "tree_sha256": "653a70f497a9686b50db4a6c6aa38d852dde64ae6132a1ae533f43c982cb9457",
+      "source_hint": "https://github.com/cosmocode/confmanager/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/cosmocode/confmanager/zipball/1b5b7c23c39a6cc32d8e1f1eefcd1818d80207ae",
+      "archive_sha256": "82c0332dc754d2de311e0b0bb63dcb0adc2dd33264aa0aef05fa73d8fe8eb3a9",
+      "repository": "https://github.com/cosmocode/confmanager.git",
+      "commit": "1b5b7c23c39a6cc32d8e1f1eefcd1818d80207ae"
+    },
+    {
+      "path": "lib/plugins/csv",
+      "tree_sha256": "fd1fde3f0f3a6f2dbb43cb33ad76f550944d5d9d510c5afb90df9a019e5b54e5",
+      "source_hint": "https://github.com/cosmocode/csv/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/cosmocode/csv/zipball/35c870d9e2183b008148af8ca92f3ced99a89403",
+      "archive_sha256": "e2180b550a2dd6bd979fef379fccea002f9c7d181bc0e7dd3cd019eb9e3387f6",
+      "repository": "https://github.com/cosmocode/csv.git",
+      "commit": "35c870d9e2183b008148af8ca92f3ced99a89403"
+    },
+    {
+      "path": "lib/plugins/datatables",
+      "tree_sha256": "c2fac59b78264eef6155a77c3b6cc31e63137a484e964ae5c63bd36380935dff",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-datatables.git",
+      "commit": "96bcaa2069adf20ea4c9a3aca653dc4c841cc6e3",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-datatables/zipball/96bcaa2069adf20ea4c9a3aca653dc4c841cc6e3",
+      "archive_sha256": "fb7cfb13b08be611d23c874b83040276f59f05684f155890ea033980e67aef8b"
+    },
+    {
+      "path": "lib/plugins/diagrams",
+      "tree_sha256": "273cfa115154449602a46b6fd4ba07a8d4204521ae23afd7dc5636fc58392c88",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-diagrams.git",
+      "commit": "32cc40d4b22ba8ed07a0802830a0e44be2d96c66",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-diagrams/zipball/32cc40d4b22ba8ed07a0802830a0e44be2d96c66",
+      "archive_sha256": "c2d3fa484d8aee081c40997136e16103d36df738b6b201ab8d1d47452f7fb8d3"
+    },
+    {
+      "path": "lib/plugins/diffpreview",
+      "tree_sha256": "06a9b1d8d79583c34acfa2c433815fdc66c5326665dd00463d7ae07527c3c02b",
+      "source_hint": "https://github.com/tqdv/dokuwiki-diffpreview/archive/v1.3.1.zip",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/tqdv/dokuwiki-diffpreview/zipball/e8ee975a146b88dc2a58617c8cf13454f3e62be4",
+      "archive_sha256": "2472d4dd50b26274ee7dc382e8d2399369a208a10fee9ec4722c7778920f5eac",
+      "repository": "https://github.com/tqdv/dokuwiki-diffpreview.git",
+      "commit": "e8ee975a146b88dc2a58617c8cf13454f3e62be4"
+    },
+    {
+      "path": "lib/plugins/edittable",
+      "tree_sha256": "3aeb74305e49215f11ecd9962344e43602c506de09d787ae2f9c6e03cc4d65f8",
+      "source_hint": "https://github.com/cosmocode/edittable/archive/master.zip",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/cosmocode/edittable/zipball/a380ed2019114773538ab7e47b5e3d5be74b3745",
+      "archive_sha256": "66aa47b7fe04d7b85a7d9f7a1795198d1579cf246943002e86051a17efbc84c5",
+      "repository": "https://github.com/cosmocode/edittable.git",
+      "commit": "a380ed2019114773538ab7e47b5e3d5be74b3745"
+    },
+    {
+      "path": "lib/plugins/gallery",
+      "tree_sha256": "492a9e99dd8f159779707797e63be5224dad40828ff1d829f74732f14f3ed905",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-gallery.git",
+      "commit": "3cc6ebc1f6e7d728838c00d4642358e0599e3424",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-gallery/zipball/3cc6ebc1f6e7d728838c00d4642358e0599e3424",
+      "archive_sha256": "2d4b21a7ac341850f0db2284753091d1b6c36163c3757b25dba192de1a07ee1e"
+    },
+    {
+      "path": "lib/plugins/icons",
+      "tree_sha256": "5df68d4aa9caf52cd0844a63cd322586f2ef2f786e24234490a4da2a6213fb4f",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-icons.git",
+      "commit": "908929f45dc27e201a295163dc637ca1add73918",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-icons/zipball/908929f45dc27e201a295163dc637ca1add73918",
+      "archive_sha256": "a144ebc7031c08a93756c550b0d370f1cbf3f02e7e159bdeb0b39b5cf744a5e8"
+    },
+    {
+      "path": "lib/plugins/iframe",
+      "tree_sha256": "9b1c04b6f172cff2615916537a09eb7d54d503519ad42775602aa768be3666f6",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-iframe.git",
+      "commit": "a62df7c0c5c18d8df42e15f6fff1a982df5d8963",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-iframe/zipball/a62df7c0c5c18d8df42e15f6fff1a982df5d8963",
+      "archive_sha256": "c16c6ee8cf610ba7a80057eaa7380df3986fddd627b8bc59322381e292703a40"
+    },
+    {
+      "path": "lib/plugins/include",
+      "tree_sha256": "78a8ea90a46a172b9a2d5ccb9dbb9f66b96c9dbe67569fda746432f2a5eaca07",
+      "source_hint": "https://github.com/dokufreaks/plugin-include/tarball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/dokufreaks/plugin-include/zipball/6e31ef49dbf8ba836ad951ca916b2d316029e504",
+      "archive_sha256": "7d134bca15ee78f3648b57ef06d0b55d158bcdc3d91f44ef00533d3493d9d9e5",
+      "repository": "https://github.com/dokufreaks/plugin-include.git",
+      "commit": "6e31ef49dbf8ba836ad951ca916b2d316029e504"
+    },
+    {
+      "path": "lib/plugins/instantpage",
+      "tree_sha256": "e61db4e946674b233bafccafebec85801059642fef665549c11e0719231b15a0",
+      "source_hint": "https://github.com/micgro42/dokuwiki-plugin-instantpage/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/micgro42/dokuwiki-plugin-instantpage/zipball/ab6ef80209e9be8e6da45691107898ee7a23e4e2",
+      "archive_sha256": "d88ffab9e328807cb84edf28e5721b095b32f0cfedd56fca18d89e202b82ce96",
+      "repository": "https://github.com/micgro42/dokuwiki-plugin-instantpage.git",
+      "commit": "ab6ef80209e9be8e6da45691107898ee7a23e4e2"
+    },
+    {
+      "path": "lib/plugins/latexcaption",
+      "tree_sha256": "18e0cab90c3f4cb1afe142dd582366b6e8d3ac82a5482064205c565c06e34a77",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-latexcaption.git",
+      "commit": "3bbd43a8a6d9d90d2ee3c6bf895abd28b2e6563e",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-latexcaption/zipball/3bbd43a8a6d9d90d2ee3c6bf895abd28b2e6563e",
+      "archive_sha256": "f1863b8aa8c5b059a42e0de3449f4b76156c5b70c5e03a2018141c8e516025fe"
+    },
+    {
+      "path": "lib/plugins/loglog",
+      "tree_sha256": "56df4423842c33f1409ab32a241b2484cd7e7d57247a378ce011111fae23b1b6",
+      "source_hint": "https://github.com/splitbrain/dokuwiki-plugin-loglog/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/splitbrain/dokuwiki-plugin-loglog/zipball/9a30774e91744070e40666de47fd68e5b7a0d382",
+      "archive_sha256": "b5e97f98f24d62661bda1176a1e20235ab025ae78f1774f2f969a6964bdc980d",
+      "repository": "https://github.com/splitbrain/dokuwiki-plugin-loglog.git",
+      "commit": "9a30774e91744070e40666de47fd68e5b7a0d382"
+    },
+    {
+      "path": "lib/plugins/mathjax",
+      "tree_sha256": "81085e6dfd81fdefc59c0becb365678a37d38e9449a19a0b50bec22d0c17783e",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-mathjax.git",
+      "commit": "f9341ba4511f17801f104470fffca79dc96057b4",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-mathjax/zipball/f9341ba4511f17801f104470fffca79dc96057b4",
+      "archive_sha256": "fc9d946127f2e4574cfa4f658caecadd23774fad23a4605d38a72eda524a53ca"
+    },
+    {
+      "path": "lib/plugins/mcp",
+      "tree_sha256": "80750fe9b3a3b44785a0937d08f77885b19d76bdfaeccb3ed2ecb428098b0c19",
+      "source_hint": "https://github.com/cosmocode/dokuwiki-plugin-mcp/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/cosmocode/dokuwiki-plugin-mcp/zipball/c44faefa170c63435ccd19c3a25e84e2e2a24c53",
+      "archive_sha256": "dbace4cd66a2caae727bd5baa96541afe026beb4a82285d74c3998bdb631fd9c",
+      "repository": "https://github.com/cosmocode/dokuwiki-plugin-mcp.git",
+      "commit": "c44faefa170c63435ccd19c3a25e84e2e2a24c53"
+    },
+    {
+      "path": "lib/plugins/meta",
+      "tree_sha256": "be0c7e02b6b0c0ee61a0aa859f10d1cfa52cdbb4b1f4f239b779a014c3cd244b",
+      "source_hint": "https://github.com/dokufreaks/plugin-meta/tarball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/dokufreaks/plugin-meta/zipball/869af54553ce5038ff541f88618a0422bb1d2cd4",
+      "archive_sha256": "09a67ca72fe013bb210580ca19ec6be16c3ca8c3e6068d10f4add9e6b6c0ff7f",
+      "repository": "https://github.com/dokufreaks/plugin-meta.git",
+      "commit": "869af54553ce5038ff541f88618a0422bb1d2cd4"
+    },
+    {
+      "path": "lib/plugins/move",
+      "tree_sha256": "9b5fd758f6ff8d78a019a0bbb7c134f6a51a96b7ae526f4c094130f29934d291",
+      "source_hint": "https://github.com/michitux/dokuwiki-plugin-move/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/michitux/dokuwiki-plugin-move/zipball/5316a909509f2fe5e8b1df181bcf88781a787dfe",
+      "archive_sha256": "dbb9fa413e0a1d457b4b9c0505893a9c2c9ce834635d95524c986262b4e104a8",
+      "repository": "https://github.com/michitux/dokuwiki-plugin-move.git",
+      "commit": "5316a909509f2fe5e8b1df181bcf88781a787dfe"
+    },
+    {
+      "path": "lib/plugins/notfound",
+      "tree_sha256": "b8fc0ef99823b948c3ba2d7e382fe1c5009a8f9e0760137318b45c6853a35a8c",
+      "source_hint": "https://github.com/splitbrain/dokuwiki-plugin-notfound/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/splitbrain/dokuwiki-plugin-notfound/zipball/7a3f0b45de8309741841bb732f67fac59fd1273c",
+      "archive_sha256": "3918a50ca6e20e075ccf2fbe9dec20bb4e71c30c37db9d7b7b499350274a8655",
+      "repository": "https://github.com/splitbrain/dokuwiki-plugin-notfound.git",
+      "commit": "7a3f0b45de8309741841bb732f67fac59fd1273c"
+    },
+    {
+      "path": "lib/plugins/nspages",
+      "tree_sha256": "6ffc11b2a903332415d7df511813e10a2d59f2471bcb3373d25aef325cbf8269",
+      "source_hint": "https://codeberg.org/gturri/nspages/archive/main.zip",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://codeberg.org/gturri/nspages/archive/f59bce67182d4bd625eaf6cfd2dcbec23332755d.zip",
+      "archive_sha256": "4ed55a9dea04ca345d7602307d956a3bcf66ff29aabc8181a8ed734099b893b1",
+      "repository": "https://codeberg.org/gturri/nspages.git",
+      "commit": "f59bce67182d4bd625eaf6cfd2dcbec23332755d"
+    },
+    {
+      "path": "lib/plugins/numberedheadings",
+      "tree_sha256": "8475a31ff9a972d7c4771e0043c0ca76afbd82fa1fb2c14005de4e9bd6003804",
+      "source_hint": "https://github.com/ssahara/dw-plugin-NumberedHeadings/archive/master.zip",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/ssahara/dw-plugin-NumberedHeadings/zipball/fe221920bcd0f7260001013809e9ac5f322a93a8",
+      "archive_sha256": "74b3d9b1f34c285b1d793986c7b5ed6060ba9f27b22ead044de0cb92e4521d19",
+      "repository": "https://github.com/ssahara/dw-plugin-NumberedHeadings.git",
+      "commit": "fe221920bcd0f7260001013809e9ac5f322a93a8"
+    },
+    {
+      "path": "lib/plugins/pagelist",
+      "tree_sha256": "e9f4c7158c9d815952b78ef96fa6632f171bb8021fe178cd00f00264fad64017",
+      "source_hint": "https://github.com/dokufreaks/plugin-pagelist/archive/master.zip",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/dokufreaks/plugin-pagelist/zipball/53f63e4842a91d5f1bc5eb1259d0cffc33fe110a",
+      "archive_sha256": "23972754d79b97452e2139590a419e6d1ca447acf287e7ee556d2e24314f413b",
+      "repository": "https://github.com/dokufreaks/plugin-pagelist.git",
+      "commit": "53f63e4842a91d5f1bc5eb1259d0cffc33fe110a"
+    },
+    {
+      "path": "lib/plugins/pageredirect",
+      "tree_sha256": "0d808ebae8780d0d3e47139001064932e76e8047ae0a0cc20c7dc2c88e8d8512",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-pageredirect.git",
+      "commit": "0dd96f3a46fad654ddde99438188e912bace03c2",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-pageredirect/zipball/0dd96f3a46fad654ddde99438188e912bace03c2",
+      "archive_sha256": "8fb900a6e8c79adf4f02c438e0a17f22c65cc7a97f7795e915d74c2bf94b4e9a"
+    },
+    {
+      "path": "lib/plugins/qrcodephp",
+      "tree_sha256": "027d8cfbaa35ae17bb2f68a36e8cf41829d3b6ae514dd026b1fc9be12242f029",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-qrcodephp.git",
+      "commit": "df4b0e381ce918a50f18c25e4de833dccd93d427",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-qrcodephp/zipball/df4b0e381ce918a50f18c25e4de833dccd93d427",
+      "archive_sha256": "853fb662d78ccc67bca46f934764001f003a8581e61d9a061a81cc3b8587c6cd"
+    },
+    {
+      "path": "lib/plugins/searchindex",
+      "tree_sha256": "ad3520d3ea2de4a8ac8def3a8aa160101d29e3809102ab93a60a340dddc1b951",
+      "source_hint": "https://github.com/splitbrain/dokuwiki-plugin-searchindex/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/splitbrain/dokuwiki-plugin-searchindex/zipball/eb0234c32824d6a55269668f8c05be88b622ae35",
+      "archive_sha256": "c4b8e5845b2d9ed0aa90e2f8eb929c6f673c130f5afada90bf35d663a2facbf0",
+      "repository": "https://github.com/splitbrain/dokuwiki-plugin-searchindex.git",
+      "commit": "eb0234c32824d6a55269668f8c05be88b622ae35"
+    },
+    {
+      "path": "lib/plugins/smtp",
+      "tree_sha256": "fc2efa90efe6e77ee4498a37759a12ec61b9a69a026d2d3550d5f8e2df237ac1",
+      "source_hint": "https://github.com/splitbrain/dokuwiki-plugin-smtp/zipball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/splitbrain/dokuwiki-plugin-smtp/zipball/2edfd0d1fc85de54f242e383bf92499393bf65fd",
+      "archive_sha256": "a395c61f2c712e073357d96debf6f6a81f8847470924dd40d0600ac898d99990",
+      "repository": "https://github.com/splitbrain/dokuwiki-plugin-smtp.git",
+      "commit": "2edfd0d1fc85de54f242e383bf92499393bf65fd"
+    },
+    {
+      "path": "lib/plugins/sqlite",
+      "tree_sha256": "7ade570bce7fb3730ea92fb40b18a141f25ca9794a52afe04bec3c674a8a80e5",
+      "source_hint": "https://github.com/cosmocode/sqlite/tarball/master",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/cosmocode/sqlite/zipball/2cd0915ee18b8027c67a5294cb45eae76af98ff3",
+      "archive_sha256": "e21ee994d098efb8d13789b5648afa24c9ced34169b3844fe9f8d313b614bc14",
+      "repository": "https://github.com/cosmocode/sqlite.git",
+      "commit": "2cd0915ee18b8027c67a5294cb45eae76af98ff3"
+    },
+    {
+      "path": "lib/plugins/tag",
+      "tree_sha256": "359b1d1c290a0b012b1aa51f4870eefc90cf2832b9873230e55a9ddd4ee3237b",
+      "source_hint": "https://github.com/dokufreaks/plugin-pagelist/archive/master.zip",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/dokufreaks/plugin-tag/zipball/6c862059cc41df6938a24ad9a49fc4812b467b21",
+      "archive_sha256": "652b937489d999e6569d8f3fe8bcf6e8122fa2dd0572d3ad6e3f4745cd0cea5c",
+      "repository": "https://github.com/dokufreaks/plugin-tag.git",
+      "commit": "6c862059cc41df6938a24ad9a49fc4812b467b21"
+    },
+    {
+      "path": "lib/plugins/templatepagename",
+      "tree_sha256": "9cc8e58e8d61edc7c3d5f8d1b162f48a0395570f088f1e6ec8d17beace317dd8",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-templatepagename.git",
+      "commit": "fe5c8f6977056776f5608b35c2bc1528497e148e",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-templatepagename/zipball/fe5c8f6977056776f5608b35c2bc1528497e148e",
+      "archive_sha256": "f72213b78d152100b1d2c5d6ac6eb1fda1388f24f862b61fcabc264005cde55b"
+    },
+    {
+      "path": "lib/plugins/threejs",
+      "tree_sha256": "d935537528a6d3bc54409c70a08d56bbd931a1ae1c47e5542203d0f53d3eb6e0",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-threejs.git",
+      "commit": "2a53bc49e3d456afeb2dd6df2b83296a08089ac0",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-threejs/zipball/2a53bc49e3d456afeb2dd6df2b83296a08089ac0",
+      "archive_sha256": "fbfeecdf17a57fb4eeb69a785f08add1dc882856ba4a06f720f5c37fca9508a0"
+    },
+    {
+      "path": "lib/plugins/upgrade",
+      "tree_sha256": "ea1560821ef069c6074a219e927d1c0ed0e2b93e7eb2050fb5661c8b2c024677",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/splitbrain/dokuwiki-plugin-upgrade/zipball/a963e7a2ec1dd272b2b62b5d745f09175b530983",
+      "archive_sha256": "7c482122b10b409666b1316e56a166be215a61f4e2c23195031a0ffdddf9672e",
+      "repository": "https://github.com/splitbrain/dokuwiki-plugin-upgrade.git",
+      "commit": "a963e7a2ec1dd272b2b62b5d745f09175b530983",
+      "languages": [
+        "en"
+      ]
+    },
+    {
+      "path": "lib/plugins/vshare",
+      "tree_sha256": "975352d0d0934bcd293f51e82cb423e8c7c58227ffcff81bf774ebec6e3514a1",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/splitbrain/dokuwiki-plugin-vshare/zipball/fc10b2a86db297cb8b672c663225a83fbd4d5d9d",
+      "archive_sha256": "ac98b76f9c707c2e056ad9fdab46bcc77115ddbe760e243bd5c972f7dde579eb",
+      "repository": "https://github.com/splitbrain/dokuwiki-plugin-vshare.git",
+      "commit": "fc10b2a86db297cb8b672c663225a83fbd4d5d9d",
+      "languages": [
+        "en"
+      ]
+    },
+    {
+      "path": "lib/plugins/wrap",
+      "tree_sha256": "4003853715bdfc2d8fd78d614ece8402359a9d131a43e06f4dbc70660bcee507",
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/selfthinker/dokuwiki_plugin_wrap/zipball/0fe74b4d407fca551e2bc1aefb19a5279d5cdd0d",
+      "archive_sha256": "4798061a8928c9c26d8dd71da9357c1478e0c0bbd392ab969d829d931eba7282",
+      "repository": "https://github.com/selfthinker/dokuwiki_plugin_wrap.git",
+      "commit": "0fe74b4d407fca551e2bc1aefb19a5279d5cdd0d",
+      "languages": [
+        "en"
+      ]
+    },
+    {
+      "path": "lib/tpl/bootstrap3",
+      "tree_sha256": "aa1f023be178e2f612c95c1b1d8f22bb5f916e675580dbf03e089ef5c6a433c0",
+      "repository": "https://github.com/bennvan/dokuwiki-template-bootstrap3.git",
+      "commit": "48b40e5a8ae1e381e32e57251a00006fb553ec5c",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/48b40e5a8ae1e381e32e57251a00006fb553ec5c",
+      "archive_sha256": "171b4a283dae677cf826fbd8cf44220c41d1acf1c2bb132771e960bc0175a9e9"
+    }
+  ]
+}
