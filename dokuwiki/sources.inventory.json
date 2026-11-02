@@ -99,13 +99,13 @@
     },
     {
       "path": "lib/plugins/codemirrorsyntax",
-      "tree_sha256": "65d57f04531d6f6dc3bbe936715ccd171434645e7abf297fa4b6541f10e7cf71",
+      "tree_sha256": "340e72d7ed98cb04d8ceaf911fa88589fea58ca987fed7ffc464fa6cf4431362",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-codemirrorsyntax.git",
-      "commit": "f10fc92a6b542ec3f25ba6826f6911adc3ff9dc2",
+      "commit": "3a2c9c72ba69f38067fffba0ed1a66700e764e8b",
       "worktree_clean": true,
       "status": "archive-verified-against-installed-code",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-codemirrorsyntax/zipball/f10fc92a6b542ec3f25ba6826f6911adc3ff9dc2",
-      "archive_sha256": "a0ca98494d5277993b424a50686c097db9969d2661d2e896f20d946bd5a43d72"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-codemirrorsyntax/zipball/3a2c9c72ba69f38067fffba0ed1a66700e764e8b",
+      "archive_sha256": "42cdce33747123961445bd7415fe81bacc18c25ce4c5b69f5270eab0e1bb1208"
     },
     {
       "path": "lib/plugins/commentsyntax",
@@ -189,13 +189,13 @@
     },
     {
       "path": "lib/plugins/icons",
-      "tree_sha256": "5df68d4aa9caf52cd0844a63cd322586f2ef2f786e24234490a4da2a6213fb4f",
+      "tree_sha256": "4e849b5b975896fa150cd3d6de3b4a744c1345e9cd58e48cbd711d3b8d5bb482",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-icons.git",
-      "commit": "908929f45dc27e201a295163dc637ca1add73918",
+      "commit": "6e8adbecd331b08605a6abc0c94e298c4942a087",
       "worktree_clean": true,
       "status": "archive-verified-against-installed-code",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-icons/zipball/908929f45dc27e201a295163dc637ca1add73918",
-      "archive_sha256": "a144ebc7031c08a93756c550b0d370f1cbf3f02e7e159bdeb0b39b5cf744a5e8"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-icons/zipball/6e8adbecd331b08605a6abc0c94e298c4942a087",
+      "archive_sha256": "0f5cdd1eeaebf8cb53770be3520a3f259ead275730106fc3ce248c29dfdf404a"
     },
     {
       "path": "lib/plugins/iframe",

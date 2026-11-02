@@ -1,6 +1,15 @@
 # Changelog
 
-## Unreleased
+## 0.1.4 — 2026-11-03
+
+- Bundle Font Awesome Free 7.3.1 and the updated Icons picker: collection search,
+  fixed-width control, improved sizing/layout and explicit `fa>` insertion.
+  Old Font Awesome icon names are not retained as compatibility aliases.
+- Refresh cached toolbar JavaScript when the Icons toolbar definition changes,
+  and preserve SVG dimensions and collection cache dependencies.
+- Add Ctrl+/ (Cmd+/ on macOS) comment toggling in CodeMirror Extended Syntax.
+  Wiki comments use the bundled Comment Syntax plugin; code blocks use their
+  language's comment syntax.
 
 - Include the editable custom 404 page in starter content for new installations.
   Existing installations can copy it manually to `data/pages/404.txt`; updates

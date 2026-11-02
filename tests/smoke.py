@@ -22,7 +22,7 @@ def docker(*args, stdin=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--image', default='hassio-dokuwiki:0.1.3')
+    parser.add_argument('--image', default='hassio-dokuwiki:0.1.4')
     args = parser.parse_args()
     name = 'dokuwiki-smoke-' + uuid.uuid4().hex[:10]
     volume = name + '-share'
@@ -93,7 +93,7 @@ def main():
 
     def fingerprint():
         return json.loads(php('''$files = ['conf/local.php', 'conf/users.auth.php', 'conf/acl.auth.php', 'conf/aclplusregex.conf',
-            'data/pages/release_test.txt', 'data/media/release-test.png'];
+            'data/pages/release_test.txt', 'data/pages/404.txt', 'data/media/release-test.png'];
             $hashes = []; foreach ($files as $file) $hashes[$file] = hash_file('sha256', '/share/dokuwiki/'.$file);
             echo json_encode($hashes);'''))
 
@@ -144,6 +144,24 @@ def main():
         if match: login['sectok'] = match.group(1).decode()
         status, _, page = request('/doku.php', fields=login)
         check(status == 200 and b'do=logout' in page, 'owner can log in')
+        status, _, missing = request('/doku.php?id=missing_release_fixture')
+        check(status in (200, 404) and b'404 Not Found' in missing and b'Site Home' in missing,
+              'fresh installation renders the editable custom 404 page')
+        # Owner changes must survive replacement and backup/restore too.
+        php("file_put_contents(wikiFN('404'), \"\\nOwner customised not-found page.\\n\", FILE_APPEND);")
+        pack = json.loads(php("echo gzdecode(file_get_contents(DOKU_PLUGIN.'icons/assets/iconify/json/fa.json.gz'));"))
+        check(pack['info']['version'] == '7.3.1' and len(pack['icons']) == 1992,
+              'Font Awesome Free 7.3.1 collection ships in the image')
+        status, _, picker = request('/lib/plugins/icons/exe/popup.php')
+        check(status == 200 and b'id="icon-search"' in picker and b'data-icon-size="fw"' in picker,
+              'Icons picker includes collection search and fixed-width control')
+        plugin_icon_url = '/lib/plugins/icons/exe/iconify.php?icon=fa-wrench.svg'
+        status, _, plugin_icon = request(plugin_icon_url, anonymous=True)
+        check(status == 200 and b'viewBox="0 0 576 512"' in plugin_icon,
+              'new Font Awesome SVG preserves its native proportions')
+        status, _, cached_plugin_icon = request(plugin_icon_url, anonymous=True)
+        check(status == 200 and cached_plugin_icon == plugin_icon,
+              'Icons plugin cached SVG is served correctly')
         # A second Iconify request exercises X-Accel-Redirect, unlike a cache miss.
         icon_url = '/lib/tpl/bootstrap3/iconify.php?icon=mdi-email.svg&color=%23123456'
         status, headers, icon = request(icon_url, anonymous=True)
@@ -158,6 +176,8 @@ def main():
 
         syntax = php("echo file_get_contents(wikiFN('wiki:syntax'));")
         edit = request('/doku.php?id=wiki:syntax&do=edit')[2]
+        check(b'/codemirrorsyntax/vendor/codemirror/comment.js?v=' in edit,
+              'CodeMirror comment helper loads in the editor')
         warnings_before = docker('logs', name).count('a client request body is buffered')
         status, _, preview = request('/doku.php', fields={'id': 'wiki:syntax', 'do[preview]': 'Preview',
             'sectok': token(edit), 'wikitext': syntax})
