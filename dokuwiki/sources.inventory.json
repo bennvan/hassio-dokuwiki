@@ -79,13 +79,13 @@
     },
     {
       "path": "lib/plugins/codehighlightjs",
-      "tree_sha256": "6da3777c39a88f5b47085cceab1bd74390f35b97078278a2c240237f187d410d",
+      "tree_sha256": "4982e3a2a052aa5ecc5b5d8ae428439751aad8f615d622dbb7b54bd21d48a4b0",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-highlightjs.git",
-      "commit": "0a5b95ea4909f77c777a97dfc81c7a91333a2d24",
+      "commit": "349c906519f1bb62faa538704139f065fa5cc07b",
       "worktree_clean": true,
       "status": "archive-verified-against-installed-code",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-highlightjs/zipball/0a5b95ea4909f77c777a97dfc81c7a91333a2d24",
-      "archive_sha256": "82b91962681cecea392f7c8306fc9b4eee844a76dc3e3cdc4a908c0fa7f7aab1"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-highlightjs/zipball/349c906519f1bb62faa538704139f065fa5cc07b",
+      "archive_sha256": "eb4d6448cd5e94a35340169a0191df82c32477ccecdcc7866c85d271a681e1ba"
     },
     {
       "path": "lib/plugins/codemirror",
@@ -445,13 +445,13 @@
     },
     {
       "path": "lib/tpl/bootstrap3",
-      "tree_sha256": "a6895e7b5e70ca0eac791f20d042dddd43d981060ef086a67f5df4e4f400717d",
+      "tree_sha256": "4e9153bfb56be3dd3116749223b8893cfb583f217885f624276a4213a1a9a073",
       "repository": "https://github.com/bennvan/dokuwiki-template-bootstrap3.git",
-      "commit": "00ae7a85c3fa1d1adcddc7a9b0c8d6f4aa574580",
+      "commit": "07db75e2ae5ac2fad0b780644e23292dcf87dc04",
       "worktree_clean": true,
       "status": "archive-verified-against-installed-code",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/00ae7a85c3fa1d1adcddc7a9b0c8d6f4aa574580",
-      "archive_sha256": "9fdd2a2c732d8a2dc0d846810c2870aef7bc26afbed12584aeee8f092a9bc02c"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/07db75e2ae5ac2fad0b780644e23292dcf87dc04",
+      "archive_sha256": "57f2602d5788e4735dbfadfcf059672097a2ab1bb496554bf5812d42388ba250"
     }
   ]
 }

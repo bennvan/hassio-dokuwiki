@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.5 — 2026-11-03
+
+- Fix Highlight.js warnings caused by Mort's copy button inside code blocks;
+  retain one copy control and preserve literal HTML/entities when copying.
+- Keep the editor full-width below the draft autosave status.
+- Keep CodeMirror settings and theme choices on-screen on mobile, with a
+  visible Close settings control, outside-tap dismissal and Escape support.
+- Keep the template's normal JavaScript bundling; no automatic cache-refresh
+  mechanism is added. Purge generated JavaScript and reload if stale assets persist.
+
 ## 0.1.4 — 2026-11-03
 
 - Bundle Font Awesome Free 7.3.1 and the updated Icons picker: collection search,
