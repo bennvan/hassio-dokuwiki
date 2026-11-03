@@ -39,13 +39,13 @@
     },
     {
       "path": "lib/plugins/approve",
-      "tree_sha256": "fc918b2f98ee7a403a70a73338164e1b3a193c809d1e7158b008b809b6ef6074",
+      "tree_sha256": "66d80d49191fa59a718df5c90037e1f0d23e5544511c455b5d66d79f1532d6c1",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-approve.git",
-      "commit": "fb8d035d37e563483b7f1f30b2e282c34f97ed4c",
+      "commit": "0e26c4e8e1dc9d1ec926bf772c907cbe1d10fb2b",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-approve/zipball/fb8d035d37e563483b7f1f30b2e282c34f97ed4c",
-      "archive_sha256": "96cbeb5d50b0a9b99a8695f0c90ba3dc305a53ab92654bb1fbfaa094c24b5bad"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-approve/zipball/0e26c4e8e1dc9d1ec926bf772c907cbe1d10fb2b",
+      "archive_sha256": "4058f08682f2c67dcaae511732db89a8a6a1bed72147952c9949c2357e18610f"
     },
     {
       "path": "lib/plugins/bootswrapper",
@@ -109,13 +109,13 @@
     },
     {
       "path": "lib/plugins/codemirrorsyntax",
-      "tree_sha256": "340e72d7ed98cb04d8ceaf911fa88589fea58ca987fed7ffc464fa6cf4431362",
+      "tree_sha256": "ea67f9a80f4180965ab1bd961be36fba09a66b2a042beee8bbcac0c744e64537",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-codemirrorsyntax.git",
-      "commit": "3a2c9c72ba69f38067fffba0ed1a66700e764e8b",
+      "commit": "9650962adb3d8dffcf32eba7c2cc525d1e2ea5a5",
       "worktree_clean": true,
-      "status": "archive-verified-against-installed-code",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-codemirrorsyntax/zipball/3a2c9c72ba69f38067fffba0ed1a66700e764e8b",
-      "archive_sha256": "42cdce33747123961445bd7415fe81bacc18c25ce4c5b69f5270eab0e1bb1208"
+      "status": "verified",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-codemirrorsyntax/zipball/9650962adb3d8dffcf32eba7c2cc525d1e2ea5a5",
+      "archive_sha256": "ebb6dee2c36ed8fbbc482a941c8e60173b82c344b0b12044652e4950e482262b"
     },
     {
       "path": "lib/plugins/commentsyntax",

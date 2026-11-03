@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.8 — 2026-11-04
+
+- Add `@APPROVE_NAME@` to show the approving user's current full name. It uses
+  the stored username to look up the authentication backend; no database change
+  is needed. If the name or account is unavailable, it falls back to the username.
+
 ## 0.1.7 — 2026-11-04
 
 - Treat 400×400 as the maximum avatar upload size. Smaller photos are no longer

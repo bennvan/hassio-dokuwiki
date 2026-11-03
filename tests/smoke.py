@@ -22,7 +22,7 @@ def docker(*args, stdin=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--image', default='hassio-dokuwiki:0.1.7')
+    parser.add_argument('--image', default='hassio-dokuwiki:0.1.8')
     args = parser.parse_args()
     name = 'dokuwiki-smoke-' + uuid.uuid4().hex[:10]
     volume = name + '-share'
@@ -235,6 +235,9 @@ def main():
         request('/doku.php?id=release_test&approve=major')
         approved = approval()
         check(approved and approved['approved'] and int(approved['version']) == 1, 'Approve creates a version in SQLite')
+        approval_name = php("$ID='release_test';$INFO=['id'=>$ID,'exists'=>true];$ACT='show';$info=[];echo p_render('xhtml',p_get_instructions('@APPROVE_NAME@'),$info);")
+        check('data-key="approved_name">Release Tester</span>' in approval_name,
+              'approval name resolves the approving account full name')
         # Enable remote API solely in this disposable wiki, retaining normal auth.
         php('''file_put_contents(DOKU_CONF.'local.php', "\\n\\$conf['remote']=1;\\n\\$conf['remoteuser']='@admin';\\n\\$conf['trustedproxies']=[];\\n", FILE_APPEND);''')
         # Direct fixture writes occur outside FPM; allow timestamp granularity/cache validation.
