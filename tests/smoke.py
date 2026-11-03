@@ -22,7 +22,7 @@ def docker(*args, stdin=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--image', default='hassio-dokuwiki:0.1.6')
+    parser.add_argument('--image', default='hassio-dokuwiki:0.1.7')
     args = parser.parse_args()
     name = 'dokuwiki-smoke-' + uuid.uuid4().hex[:10]
     volume = name + '-share'
@@ -209,8 +209,8 @@ def main():
         png = base64.b64decode(php('''$im=imagecreatetruecolor(240,180); ob_start(); imagepng($im); echo base64_encode(ob_get_clean());'''))
         status, _, page = multipart('/lib/tpl/bootstrap3/avatar-upload.php', {'sectok': token(profile)},
                                     'avatar', 'photo.png', png, 'image/png')
-        check(status == 200 and json.loads(php('$size=getimagesize(mediaFN("user:releaseadmin:public:avatar.png"));echo json_encode([$size[0],$size[1]]);')) == [400,400],
-              'avatar upload is resized to 400x400')
+        check(status == 200 and json.loads(php('$size=getimagesize(mediaFN("user:releaseadmin:public:avatar.png"));echo json_encode([$size[0],$size[1]]);')) == [180,180],
+              'small avatar upload is cropped to 180x180 without upscaling')
         status, _, body = multipart('/lib/exe/ajax.php', {'call': 'mediaupload', 'ns': '',
                                     'mediaid': 'release-test.png', 'sectok': token(profile)},
                                     'qqfile', 'release-test.png', png, 'image/png')

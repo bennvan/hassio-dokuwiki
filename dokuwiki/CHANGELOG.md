@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.7 — 2026-11-04
+
+- Treat 400×400 as the maximum avatar upload size. Smaller photos are no longer
+  enlarged; centre-cropping to a square and PNG conversion are retained.
+- Update the profile photo help text to explain the size limit.
+
+Existing avatars are unchanged. Re-upload the original photo to replace an avatar
+that was enlarged by an earlier release.
+
 ## 0.1.6 — 2026-11-04
 
 - Add the Add New Page plugin.
