@@ -4,11 +4,19 @@
     "result": "verified"
   },
   {
+    "component": "addnewpage",
+    "result": "verified"
+  },
+  {
     "component": "advanced",
     "result": "verified"
   },
   {
     "component": "approve",
+    "result": "verified"
+  },
+  {
+    "component": "bootstrap3",
     "result": "verified"
   },
   {
@@ -61,6 +69,10 @@
   },
   {
     "component": "diffpreview",
+    "result": "verified"
+  },
+  {
+    "component": "dw2pdf",
     "result": "verified"
   },
   {
@@ -165,14 +177,6 @@
   },
   {
     "component": "vshare",
-    "result": "verified"
-  },
-  {
-    "component": "wrap",
-    "result": "verified"
-  },
-  {
-    "component": "bootstrap3",
     "result": "verified"
   }
 ]

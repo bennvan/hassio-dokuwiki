@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.1.6 — 2026-11-04
+
+- Add the Add New Page plugin.
+- Bundle DW2PDF, disabled by default on fresh installations. Existing installations
+  retain their plugin settings; disable DW2PDF in Extension Manager if unwanted.
+- Remove Wrap; convert existing `<WRAP>`/`<wrap>` content to BootsWrapper's
+  lowercase `<wrapper>` syntax. Historical revisions using Wrap will no longer
+  render those blocks.
+- Support nested block wrappers and `<wrapper inline="true">` for inline spans
+  that stay within the surrounding paragraph. Uppercase `<WRAPPER>` is no longer
+  supported; existing inline uses of lowercase wrappers need `inline="true"`.
+- Add plain DataTables with merged cells, stripe and border controls, custom
+  border/header colours and responsive horizontal overflow on small screens.
+- Fix Bootstrap3 table handling so mixed heading cells and vertical merges are
+  preserved; respect per-table styling options.
+- Save uploaded profile photos at 400×400, with appropriately sized cached
+  thumbnails for navigation, contributors and tooltips. Existing photos are kept.
+- Show `TBD` for approval variables on unapproved draft revisions; approved
+  revisions keep their approval metadata.
+
+Starter content/settings apply only to new installations. Existing pages, media,
+accounts, approval databases and configuration are never overwritten.
+
 ## 0.1.5 — 2026-11-03
 
 - Fix Highlight.js warnings caused by Mort's copy button inside code blocks;

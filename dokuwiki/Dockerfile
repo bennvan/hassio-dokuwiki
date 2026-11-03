@@ -35,7 +35,7 @@ RUN mkdir -p /opt/dokuwiki-defaults \
     && chmod -R go-w /var/www/html /opt/dokuwiki-defaults
 LABEL org.opencontainers.image.title="DokuWiki for Home Assistant" \
       org.opencontainers.image.source="https://github.com/bennvan/hassio-dokuwiki" \
-      org.opencontainers.image.version="0.1.5"
+      org.opencontainers.image.version="0.1.6"
 EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=5s CMD curl -fsS http://127.0.0.1:8080/healthz || exit 1
 ENTRYPOINT ["/opt/dokuwiki-runtime/entrypoint.sh"]

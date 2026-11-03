@@ -1,7 +1,6 @@
 ~~NOPAGEINFO~~
 
-<jumbotron>
-<WRAP centeralign>
+<jumbotron align="center">
 {{icon>emojione:face-with-head-bandage?100}}
 ====== 404 Not Found ======
 The page you have requested does not exist.
@@ -15,5 +14,4 @@ The page you have requested does not exist.
 <btn type="success" icon="fa:plus" href="?do=edit"> Create Page</btn>
 </wrapper>
 
-</WRAP>
 </jumbotron>

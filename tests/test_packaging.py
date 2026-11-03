@@ -24,7 +24,9 @@ class PackagingTests(unittest.TestCase):
             (storage / 'conf/setting.txt').write_text('user choice')
             (storage / 'data/pages/private.txt').write_text('user content')
             (seed / 'conf/setting.txt').write_text('changed release defaults')
+            (seed / 'conf/plugins.local.php').write_text("<?php $plugins['dw2pdf'] = 0;")
             subprocess.run(cmd, check=True, capture_output=True)
+            self.assertFalse((storage / 'conf/plugins.local.php').exists())
             self.assertEqual((storage / 'conf/setting.txt').read_text(), 'user choice')
             self.assertEqual((storage / 'data/pages/private.txt').read_text(), 'user content')
 

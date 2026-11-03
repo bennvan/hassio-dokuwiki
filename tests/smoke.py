@@ -22,7 +22,7 @@ def docker(*args, stdin=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--image', default='hassio-dokuwiki:0.1.5')
+    parser.add_argument('--image', default='hassio-dokuwiki:0.1.6')
     args = parser.parse_args()
     name = 'dokuwiki-smoke-' + uuid.uuid4().hex[:10]
     volume = name + '-share'
@@ -92,7 +92,7 @@ def main():
         raise AssertionError('Container did not become ready')
 
     def fingerprint():
-        return json.loads(php('''$files = ['conf/local.php', 'conf/users.auth.php', 'conf/acl.auth.php', 'conf/aclplusregex.conf',
+        return json.loads(php('''$files = ['conf/local.php', 'conf/users.auth.php', 'conf/acl.auth.php', 'conf/aclplusregex.conf', 'conf/plugins.local.php',
             'data/pages/release_test.txt', 'data/pages/404.txt', 'data/media/release-test.png'];
             $hashes = []; foreach ($files as $file) $hashes[$file] = hash_file('sha256', '/share/dokuwiki/'.$file);
             echo json_encode($hashes);'''))
@@ -104,6 +104,8 @@ def main():
     try:
         start(volume)
         check(int(php('echo PHP_VERSION_ID;')) >= 80512, 'PHP runtime includes the PHP2Shell fixes')
+        check(json.loads(php('echo json_encode([is_dir(DOKU_PLUGIN."wrap"), is_dir(DOKU_PLUGIN."addnewpage"), is_dir(DOKU_PLUGIN."dw2pdf"), plugin_isdisabled("dw2pdf")]);')) == [False, True, True, True],
+              'Wrap removed, Add New Page bundled, DW2PDF bundled and disabled by default')
         status, _, page = request('/')
         check(status == 200 and b'name="d[superuser]"' in page, 'fresh root opens installer')
         check(b'name="d[license]"' in page, 'installer reads shipped configuration')
@@ -147,6 +149,17 @@ def main():
         status, _, missing = request('/doku.php?id=missing_release_fixture')
         check(status in (200, 404) and b'404 Not Found' in missing and b'Site Home' in missing,
               'fresh installation renders the editable custom 404 page')
+        check(re.search(rb'<div\b[^>]*id="notfound_create_page_btn"[^>]*>', missing) is not None
+              and b'&lt;wrapper' not in missing and b'&lt;WRAPPER' not in missing,
+              'starter 404 hidden action renders as a block with no unparsed wrapper tags')
+        wrapper_markup = '<wrapper id="outer">\nOuter\n\n<wrapper id="inner">\nStatus: <wrapper inline="true" id="status">Offline <wrapper inline="true" id="nested">today</wrapper></wrapper> here.\n</wrapper>\n</wrapper>'
+        encoded_wrapper = base64.b64encode(wrapper_markup.encode()).decode()
+        wrapper_result = json.loads(php("$ID='release_test';$info=[];$markup=p_render('xhtml',p_get_instructions(base64_decode('" + encoded_wrapper + "')),$info);"
+            + "$doc=new DOMDocument();@$doc->loadHTML($markup);$xpath=new DOMXPath($doc);"
+            + "echo json_encode([$xpath->query('//div[@id=\"outer\"]/div[@id=\"inner\"]/p/span[@id=\"status\"]/span[@id=\"nested\"]')->length,"
+            + "$xpath->query('//span//div | //span//p')->length,trim($xpath->query('//div[@id=\"inner\"]/p')->item(0)->textContent)]);"))
+        check(wrapper_result == [1, 0, 'Status: Offline today here.'],
+              'nested block and inline wrappers preserve paragraph structure')
         # Owner changes must survive replacement and backup/restore too.
         php("file_put_contents(wikiFN('404'), \"\\nOwner customised not-found page.\\n\", FILE_APPEND);")
         pack = json.loads(php("echo gzdecode(file_get_contents(DOKU_PLUGIN.'icons/assets/iconify/json/fa.json.gz'));"))
@@ -196,8 +209,8 @@ def main():
         png = base64.b64decode(php('''$im=imagecreatetruecolor(240,180); ob_start(); imagepng($im); echo base64_encode(ob_get_clean());'''))
         status, _, page = multipart('/lib/tpl/bootstrap3/avatar-upload.php', {'sectok': token(profile)},
                                     'avatar', 'photo.png', png, 'image/png')
-        check(status == 200 and json.loads(php('$size=getimagesize(mediaFN("user:releaseadmin:public:avatar.png"));echo json_encode([$size[0],$size[1]]);')) == [120,120],
-              'avatar upload is resized to 120x120')
+        check(status == 200 and json.loads(php('$size=getimagesize(mediaFN("user:releaseadmin:public:avatar.png"));echo json_encode([$size[0],$size[1]]);')) == [400,400],
+              'avatar upload is resized to 400x400')
         status, _, body = multipart('/lib/exe/ajax.php', {'call': 'mediaupload', 'ns': '',
                                     'mediaid': 'release-test.png', 'sectok': token(profile)},
                                     'qqfile', 'release-test.png', png, 'image/png')
