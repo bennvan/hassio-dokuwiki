@@ -60,6 +60,48 @@ For an existing installation created without this page, copy
 `/share/dokuwiki/data/pages/404.txt` once, if that page does not already exist.
 Updates do not add or overwrite pages in existing installations.
 
+## PDF templates and fonts
+
+Enable DW2PDF in Extension Manager if it is disabled. The bundled fork discovers
+custom templates under persistent storage:
+
+```text
+/share/dokuwiki/conf/dw2pdf/tpl/mytemplate/
+  style.css
+  header.html
+  footer.html
+  fonts.json
+  fonts/Regular.ttf
+```
+
+The header/footer files are optional; `header_odd.html`, `header_even.html` and
+corresponding footer files can provide alternating layouts. A custom directory
+with the same name as a bundled template overrides it. With multiple templates,
+the normal PDF export link offers a chooser. Explicit URLs such as
+`?do=export_pdf&tpl=mytemplate` select one directly.
+
+To register a font, use a `fonts.json` file such as:
+
+```json
+{"documentfont": {"R": "fonts/Regular.ttf"}}
+```
+
+Add `B`, `I` and `BI` entries for bold, italic and bold italic TrueType files.
+Select the registered family in `style.css`, for example
+`body { font-family: documentfont; }`. Font files must be readable `.ttf` files
+inside the template directory and licensed for your intended use. Browser web
+fonts are not automatically copied into PDFs. Custom templates, fonts and assets
+stay in `conf/` across updates and are included when backing up Share.
+
+## History access with DenyActions
+
+Fresh installs seed `diff,revisions,recent` as denied actions for readers.
+Existing installations keep their current configuration. To enable this policy,
+set the DenyActions **denyactions** setting to `diff,revisions,recent`,
+**denyrev** to off, and **denystyle** to `msg` in DokuWiki configuration.
+Direct revision links remain available because Approve uses them to show approved
+revisions. This setting does not restrict revision URLs to approved revisions.
+
 ## Updates and storage
 
 The maintainer ships core, template and plugin updates together. Packaged code is

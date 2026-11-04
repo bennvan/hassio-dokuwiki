@@ -39,23 +39,23 @@
     },
     {
       "path": "lib/plugins/approve",
-      "tree_sha256": "66d80d49191fa59a718df5c90037e1f0d23e5544511c455b5d66d79f1532d6c1",
+      "tree_sha256": "0ad43da4b18de7334f1c9d1d9aec87604d8db60beb8ce3174f11e3651672b9c6",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-approve.git",
-      "commit": "0e26c4e8e1dc9d1ec926bf772c907cbe1d10fb2b",
+      "commit": "8ad967c6131d1e4f07d517b24be311d3e26b78b9",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-approve/zipball/0e26c4e8e1dc9d1ec926bf772c907cbe1d10fb2b",
-      "archive_sha256": "4058f08682f2c67dcaae511732db89a8a6a1bed72147952c9949c2357e18610f"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-approve/zipball/8ad967c6131d1e4f07d517b24be311d3e26b78b9",
+      "archive_sha256": "f1d0bcd2dbf7b826ae84cf7ea8b5dcd9bf0855b91901a11365cacd6aee2995ee"
     },
     {
       "path": "lib/plugins/bootswrapper",
-      "tree_sha256": "b84732aaf107987e2b2bc381ceabd4ecee3cc1d2adff6518031ef711ed3d90d5",
+      "tree_sha256": "d8746d91ef66de3fad25ac554858f661f9a90c4310ccd00f58e6c07255fb19d3",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-bootswrapper.git",
-      "commit": "ee49a2c7853b6858e4ee90401f1b93b27c63a7b8",
+      "commit": "9246efef94d4d968725f103bf047833536eb15d2",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/ee49a2c7853b6858e4ee90401f1b93b27c63a7b8",
-      "archive_sha256": "0abfc441955a2be71b9c1772f650eab796929666dc12158a381abc2bf9585d27"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/9246efef94d4d968725f103bf047833536eb15d2",
+      "archive_sha256": "33312dd0df0e94f9a2bc97ab980c26426a992ffd532e08001b6eefc7073cf378"
     },
     {
       "path": "lib/plugins/bureaucracy",
@@ -109,13 +109,13 @@
     },
     {
       "path": "lib/plugins/codemirrorsyntax",
-      "tree_sha256": "ea67f9a80f4180965ab1bd961be36fba09a66b2a042beee8bbcac0c744e64537",
+      "tree_sha256": "87a929cce063978addd7395e51c330ef1b5c4100b75385a3a8db20c9ab49ff10",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-codemirrorsyntax.git",
-      "commit": "9650962adb3d8dffcf32eba7c2cc525d1e2ea5a5",
+      "commit": "233643fa48acd21042998552d4e54b5de2efa959",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-codemirrorsyntax/zipball/9650962adb3d8dffcf32eba7c2cc525d1e2ea5a5",
-      "archive_sha256": "ebb6dee2c36ed8fbbc482a941c8e60173b82c344b0b12044652e4950e482262b"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-codemirrorsyntax/zipball/233643fa48acd21042998552d4e54b5de2efa959",
+      "archive_sha256": "6a0db97b6b08952e09ca280d361c039bd2eae7f6841c20f0a942fc8b09dbb14c"
     },
     {
       "path": "lib/plugins/commentsyntax",
@@ -149,13 +149,23 @@
     },
     {
       "path": "lib/plugins/datatables",
-      "tree_sha256": "718eb50d643048c24cc8f7fa7d74bb25ec696a75572c6f1561302c3095620b32",
+      "tree_sha256": "02eca938e3dcc16df82dfdde3a638fd4dec3959c05cf07e37a5a98f7c80aeb2c",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-datatables.git",
-      "commit": "882f2bd4eab7070efe74455d293115d44c9efb74",
+      "commit": "ba37476ad99e99f8f7c969a782b9fa9517c57d0b",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-datatables/zipball/882f2bd4eab7070efe74455d293115d44c9efb74",
-      "archive_sha256": "e3f18c5e4dbe95aba1fd8aa960f821d4054a699a6909fdb7c16ca2dc7eb6353d"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-datatables/zipball/ba37476ad99e99f8f7c969a782b9fa9517c57d0b",
+      "archive_sha256": "a5e9d18ddd40aead391dde420375741d9b5a684dfc9d25855d42c321dee04a32"
+    },
+    {
+      "path": "lib/plugins/denyactions",
+      "tree_sha256": "9221cda5d084f4ab81676a356fd2a1906a8f348c4e949bda936dc2d33d85967d",
+      "source_hint": "https://github.com/oiv/denyactions/archive/master.zip",
+      "status": "verified",
+      "repository": "https://github.com/oiv/denyactions.git",
+      "commit": "f6a1742fd106323d3240fadec3786dc69e3e7558",
+      "archive_url": "https://api.github.com/repos/oiv/denyactions/zipball/f6a1742fd106323d3240fadec3786dc69e3e7558",
+      "archive_sha256": "fa684eb0a5899177255f3fc169df9bc8b4a9b086a6f439d6df43b5ed1834b854"
     },
     {
       "path": "lib/plugins/diagrams",
@@ -179,13 +189,13 @@
     },
     {
       "path": "lib/plugins/dw2pdf",
-      "tree_sha256": "dbdb747a13518acc5971a8bd3266c46484dbcdd3104fbada9fe0285b3ececab4",
-      "source_hint": "https://github.com/splitbrain/dokuwiki-plugin-dw2pdf/tarball/master",
+      "tree_sha256": "2feef88d30d20bfcda4557ca2fd0b064349f7cd07624d8065785ec644dcd6130",
+      "repository": "https://github.com/bennvan/dokuwiki-plugin-dw2pdf.git",
+      "commit": "f5f01fd3d923f632568e616eb3f925a13821c3b8",
+      "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/splitbrain/dokuwiki-plugin-dw2pdf/zipball/87f3df334c669ed0304d75d7fe6730f7a3bb4f74",
-      "archive_sha256": "58291fcbb03c25dba9fdda37662e928a0b75ca564b31aa41774c18a93e905a35",
-      "repository": "https://github.com/splitbrain/dokuwiki-plugin-dw2pdf.git",
-      "commit": "87f3df334c669ed0304d75d7fe6730f7a3bb4f74"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-dw2pdf/zipball/f5f01fd3d923f632568e616eb3f925a13821c3b8",
+      "archive_sha256": "305411887a53158aaa53da4d80540ed12a7b8add795f7d9d2ff91ecfd561a3cb"
     },
     {
       "path": "lib/plugins/edittable",
@@ -209,13 +219,13 @@
     },
     {
       "path": "lib/plugins/icons",
-      "tree_sha256": "4e849b5b975896fa150cd3d6de3b4a744c1345e9cd58e48cbd711d3b8d5bb482",
+      "tree_sha256": "714e0bd1ebbe17573029ac9a79b10ba683a5496514e65adca18943de5a9f526c",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-icons.git",
-      "commit": "6e8adbecd331b08605a6abc0c94e298c4942a087",
+      "commit": "3613dafdb955d24de34246fe000ed6448a487ed7",
       "worktree_clean": true,
-      "status": "archive-verified-against-installed-code",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-icons/zipball/6e8adbecd331b08605a6abc0c94e298c4942a087",
-      "archive_sha256": "0f5cdd1eeaebf8cb53770be3520a3f259ead275730106fc3ce248c29dfdf404a"
+      "status": "verified",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-icons/zipball/3613dafdb955d24de34246fe000ed6448a487ed7",
+      "archive_sha256": "6deaebdb1937827b8e552a5163a66f80aa102f7b4f52acd86d019073714ac815"
     },
     {
       "path": "lib/plugins/iframe",
@@ -249,13 +259,13 @@
     },
     {
       "path": "lib/plugins/latexcaption",
-      "tree_sha256": "18e0cab90c3f4cb1afe142dd582366b6e8d3ac82a5482064205c565c06e34a77",
+      "tree_sha256": "398655a1fec63c238b594c7bbf7bfcceff1d4b8e338c076d84ad92edd957cf84",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-latexcaption.git",
-      "commit": "3bbd43a8a6d9d90d2ee3c6bf895abd28b2e6563e",
+      "commit": "c130663bfb379fdd05da153b0979be249cecd9c2",
       "worktree_clean": true,
-      "status": "archive-verified-against-installed-code",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-latexcaption/zipball/3bbd43a8a6d9d90d2ee3c6bf895abd28b2e6563e",
-      "archive_sha256": "f1863b8aa8c5b059a42e0de3449f4b76156c5b70c5e03a2018141c8e516025fe"
+      "status": "verified",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-latexcaption/zipball/c130663bfb379fdd05da153b0979be249cecd9c2",
+      "archive_sha256": "74189c146f7b242f50f1c4aefe55671ea2bb010e70a3fe26d6be2d3214b3f52b"
     },
     {
       "path": "lib/plugins/loglog",
@@ -453,13 +463,13 @@
     },
     {
       "path": "lib/tpl/bootstrap3",
-      "tree_sha256": "86b5dbb7e3f1730d5fc8b99c07438c961a50e945104f0ab518822d5d534d4305",
+      "tree_sha256": "a0f58db904b0e11adeff45082dabe9f10a5f62ba802d7fa5e74ea726a384f71e",
       "repository": "https://github.com/bennvan/dokuwiki-template-bootstrap3.git",
-      "commit": "a703779aa2b80a4852399599f3aa5188d660c568",
+      "commit": "e151abd9058d4765b1f7e3875aaaa65627da13cd",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/a703779aa2b80a4852399599f3aa5188d660c568",
-      "archive_sha256": "67dd85d169a805939ed973c624bab2c94b4aa20d599e94011045346c6de8ca7f"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/e151abd9058d4765b1f7e3875aaaa65627da13cd",
+      "archive_sha256": "0c8740342d38ab6c53adf457e0cc2312ed90750fe22db681c8954586ecb0effc"
     }
   ]
 }

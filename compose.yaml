@@ -2,7 +2,7 @@ services:
   wiki:
     build:
       context: ./dokuwiki
-    image: hassio-dokuwiki:0.1.9
+    image: hassio-dokuwiki:0.1.10
     ports:
       - "127.0.0.1:8081:8080"
     volumes:

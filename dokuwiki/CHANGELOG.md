@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.1.10 — 2026-11-05
+
+- Bundle the maintained DW2PDF fork with templates in persistent
+  `conf/dw2pdf/tpl/`, template-local TrueType fonts through `fonts.json`, a
+  template chooser when multiple templates exist, and local image loading.
+- Improve PDF rendering of BootsWrapper layouts/components, LaTeXCaption
+  figures, DataTables, tag badges and Bootstrap3 tables/document spacing.
+- Bundle 332 ISO 7010 safety signs with artwork attribution. Render bundled
+  Icons and BootsWrapper component icons as local SVG images in PDFs; reserve
+  sized browser icon placeholders to reduce layout shifts.
+- Add approval messages, `@APPROVE_MESSAGE@`, reusable approval/edit history
+  rendering and improved approval comparisons. Update CodeMirror highlighting.
+- Bundle upstream DenyActions. Fresh installations restrict `diff`, `revisions`
+  and `recent` to editors, while retaining direct revision access for Approve.
+
+Existing installations keep their settings. Configure DenyActions manually if
+wanted; see DOCS.md. DW2PDF remains disabled by default on fresh installations.
+No development templates, fonts, pages, media or databases are imported.
+
+
 ## 0.1.9 — 2026-11-04
 
 - Fix BootsWrapper popup and contextual component icons for Font Awesome 7,

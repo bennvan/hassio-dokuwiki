@@ -1,6 +1,6 @@
 name: DokuWiki
 description: DokuWiki with Bootstrap3 and curated plugins
-version: 0.1.9
+version: 0.1.10
 slug: dokuwiki
 url: https://github.com/bennvan/hassio-dokuwiki
 arch:

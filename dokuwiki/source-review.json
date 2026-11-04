@@ -64,6 +64,10 @@
     "result": "verified"
   },
   {
+    "component": "denyactions",
+    "result": "verified"
+  },
+  {
     "component": "diagrams",
     "result": "verified"
   },

@@ -22,7 +22,7 @@ def docker(*args, stdin=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--image', default='hassio-dokuwiki:0.1.9')
+    parser.add_argument('--image', default='hassio-dokuwiki:0.1.10')
     args = parser.parse_args()
     name = 'dokuwiki-smoke-' + uuid.uuid4().hex[:10]
     volume = name + '-share'
@@ -232,12 +232,21 @@ def main():
         # Configure an approver for the synthetic page, then exercise the HTTP action.
         php('''$db=plugin_load('helper','approve_db')->getDB();
             $db->query('UPDATE page SET approver=?,hidden=0 WHERE page=?','@admin','release_test');''')
-        request('/doku.php?id=release_test&approve=major')
+        _, _, approval_form = request('/doku.php?id=release_test&do=diff&approve=1')
+        revision = re.search(rb'name="approve_revision"[^>]*value="([0-9]+)"', approval_form)
+        check(revision is not None, 'approval form identifies the current revision')
+        request('/doku.php', fields={'id': 'release_test', 'do': 'show', 'approve': 'major',
+                'approve_revision': revision.group(1).decode(), 'sectok': token(approval_form),
+                'approval_message': 'Release smoke approval'})
         approved = approval()
         check(approved and approved['approved'] and int(approved['version']) == 1, 'Approve creates a version in SQLite')
         approval_name = php("$ID='release_test';$INFO=['id'=>$ID,'exists'=>true];$ACT='show';$info=[];echo p_render('xhtml',p_get_instructions('@APPROVE_NAME@'),$info);")
         check('data-key="approved_name">Release Tester</span>' in approval_name,
               'approval name resolves the approving account full name')
+        approval_message = php("$ID='release_test';$INFO=['id'=>$ID,'exists'=>true];$ACT='show';$info=[];echo p_render('xhtml',p_get_instructions('@APPROVE_MESSAGE@'),$info);")
+        check('Release smoke approval' in approval_message, 'approval message survives storage and variable rendering')
+        deny = json.loads(php("$p=plugin_load('action','denyactions_act');echo json_encode([$p->getConf('denyactions'),(int)$p->getConf('denyrev'),$p->getConf('denystyle')]);"))
+        check(deny == ['diff,revisions,recent', 0, 'msg'], 'DenyActions bundled with fresh-install history settings')
         # Enable remote API solely in this disposable wiki, retaining normal auth.
         php('''file_put_contents(DOKU_CONF.'local.php', "\\n\\$conf['remote']=1;\\n\\$conf['remoteuser']='@admin';\\n\\$conf['trustedproxies']=[];\\n", FILE_APPEND);''')
         # Direct fixture writes occur outside FPM; allow timestamp granularity/cache validation.

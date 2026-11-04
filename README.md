@@ -1,6 +1,6 @@
 # DokuWiki for Home Assistant
 
-DokuWiki Mort with a maintained Bootstrap3 template and 44 additional plugins,
+DokuWiki Mort with a maintained Bootstrap3 template and 45 additional plugins,
 packaged as a Home Assistant add-on for amd64 PCs/VMs.
 
 The runtime uses Nginx, PHP-FPM 8.5.12, SQLite and X-Accel-Redirect. It serves HTTP
@@ -85,7 +85,7 @@ those services; pinning packaged code does not make the wiki fully offline.
 
 Core and plugin code is downloaded at build time. This repository tracks source
 commits, archive checksums, build scripts and defaults, rather than duplicate Git
-repositories or installed source trees. The 45 external component archives have
+repositories or installed source trees. The 46 external component archives have
 been matched against the tested development code. The manifest is
 `dokuwiki/sources.inventory.json`; `dokuwiki/source-review.json` records the initial
 review. Bundled components retain their licences and attribution in the image.
@@ -115,7 +115,7 @@ review. Bundled components retain their licences and attribution in the image.
 python3 -B -m unittest discover -s tests -v
 python3 dokuwiki/tools/sources.py check-release
 docker compose build
-python3 -B tests/smoke.py --image hassio-dokuwiki:0.1.9
+python3 -B tests/smoke.py --image hassio-dokuwiki:0.1.10
 ```
 
 The smoke test creates synthetic accounts/content in temporary Docker volumes and
