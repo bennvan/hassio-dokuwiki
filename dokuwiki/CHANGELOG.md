@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.9 — 2026-11-04
+
+- Fix BootsWrapper popup and contextual component icons for Font Awesome 7,
+  including callouts, cards, panels, alerts, buttons, badges, labels and ribbons.
+- Update bundled help examples to use current icon names.
+- Align Bootstrap3’s bundled Font Awesome fallback with the Icons plugin; fix
+  fallback SVG sizing and refresh cached responses when the collection changes.
+
 ## 0.1.8 — 2026-11-04
 
 - Add `@APPROVE_NAME@` to show the approving user's current full name. It uses

@@ -49,13 +49,13 @@
     },
     {
       "path": "lib/plugins/bootswrapper",
-      "tree_sha256": "e55d90d95d576dbf26c6754b2abf6dc1cace4d4d346a4ece0da5abab1acd0fc7",
+      "tree_sha256": "b84732aaf107987e2b2bc381ceabd4ecee3cc1d2adff6518031ef711ed3d90d5",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-bootswrapper.git",
-      "commit": "af3091f3b23dfc25cdc2e52cb683897ec09a4432",
+      "commit": "ee49a2c7853b6858e4ee90401f1b93b27c63a7b8",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/af3091f3b23dfc25cdc2e52cb683897ec09a4432",
-      "archive_sha256": "056f472814ab1227c40e96c35f39a447786dcb48e5f12f3cc854ae6cea111923"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/ee49a2c7853b6858e4ee90401f1b93b27c63a7b8",
+      "archive_sha256": "0abfc441955a2be71b9c1772f650eab796929666dc12158a381abc2bf9585d27"
     },
     {
       "path": "lib/plugins/bureaucracy",
@@ -453,13 +453,13 @@
     },
     {
       "path": "lib/tpl/bootstrap3",
-      "tree_sha256": "d3dce53113a574f143336fc6269a9c42f857f2d7a51f516fcab5be1abeff72e7",
+      "tree_sha256": "86b5dbb7e3f1730d5fc8b99c07438c961a50e945104f0ab518822d5d534d4305",
       "repository": "https://github.com/bennvan/dokuwiki-template-bootstrap3.git",
-      "commit": "9c3df05c5e8b66534c4969c9ade6203d771765d5",
+      "commit": "a703779aa2b80a4852399599f3aa5188d660c568",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/9c3df05c5e8b66534c4969c9ade6203d771765d5",
-      "archive_sha256": "dbe2647429c3d1bb6b86c15c8ff646e67045539917bb1335924b06d33c302ef3"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/a703779aa2b80a4852399599f3aa5188d660c568",
+      "archive_sha256": "67dd85d169a805939ed973c624bab2c94b4aa20d599e94011045346c6de8ca7f"
     }
   ]
 }
