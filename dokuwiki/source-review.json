@@ -17,7 +17,12 @@
   },
   {
     "component": "bootstrap3",
-    "result": "verified"
+    "result": "verified",
+    "release": "0.1.13",
+    "commit": "e6063887c8f760e530716f9752e37663d79b7178",
+    "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/e6063887c8f760e530716f9752e37663d79b7178",
+    "archive_sha256": "6f14afe11391ace7b5911967854dad1c89a9eb62cdf2588e11c4562e2823b7ce",
+    "tree_sha256": "4d1b56f5e14aeab0bd9e61990a276a544096767bfe4409c3757a162288de8d9c"
   },
   {
     "component": "bootswrapper",

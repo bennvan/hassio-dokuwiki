@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.13 — 2026-11-05
+
+- Use the configured wiki title in contributor email subjects, in both the
+  contributor popovers and the Show All list. Encode the subject correctly
+  for titles containing spaces, quotes, ampersands or non-ASCII characters.
+
+Existing settings and content are unchanged.
+
+
 ## 0.1.12 — 2026-11-05
 
 - Use the Icons plugin's `icon>` prefix for card thumbnails, for example

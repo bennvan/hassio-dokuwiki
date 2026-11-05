@@ -115,7 +115,7 @@ review. Bundled components retain their licences and attribution in the image.
 python3 -B -m unittest discover -s tests -v
 python3 dokuwiki/tools/sources.py check-release
 docker compose build
-python3 -B tests/smoke.py --image hassio-dokuwiki:0.1.12
+python3 -B tests/smoke.py --image hassio-dokuwiki:0.1.13
 ```
 
 The smoke test creates synthetic accounts/content in temporary Docker volumes and

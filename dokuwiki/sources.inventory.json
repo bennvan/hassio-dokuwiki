@@ -463,13 +463,13 @@
     },
     {
       "path": "lib/tpl/bootstrap3",
-      "tree_sha256": "a0f58db904b0e11adeff45082dabe9f10a5f62ba802d7fa5e74ea726a384f71e",
+      "tree_sha256": "4d1b56f5e14aeab0bd9e61990a276a544096767bfe4409c3757a162288de8d9c",
       "repository": "https://github.com/bennvan/dokuwiki-template-bootstrap3.git",
-      "commit": "e151abd9058d4765b1f7e3875aaaa65627da13cd",
+      "commit": "e6063887c8f760e530716f9752e37663d79b7178",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/e151abd9058d4765b1f7e3875aaaa65627da13cd",
-      "archive_sha256": "0c8740342d38ab6c53adf457e0cc2312ed90750fe22db681c8954586ecb0effc"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-template-bootstrap3/zipball/e6063887c8f760e530716f9752e37663d79b7178",
+      "archive_sha256": "6f14afe11391ace7b5911967854dad1c89a9eb62cdf2588e11c4562e2823b7ce"
     }
   ]
 }
