@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.12 — 2026-11-05
+
+- Use the Icons plugin's `icon>` prefix for card thumbnails, for example
+  `thumbnail="icon>iso7010:m003?64"`. This replaces the temporary `icon:` prefix
+  introduced in 0.1.11; update any cards using that prefix. Media paths in an
+  `icon` namespace remain ordinary image thumbnails.
+- Preserve `>` inside quoted card attributes and close only the opening tag
+  when parsing BootsWrapper attributes. Browser and PDF thumbnails retain
+  their requested size.
+
+Existing settings and content are unchanged; page syntax is not migrated
+automatically. No development pages, media or configuration are included.
+
+
 ## 0.1.11 — 2026-11-05
 
 - Accept Icons-plugin identifiers as card thumbnails, for example
