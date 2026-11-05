@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.11 — 2026-11-05
+
+- Accept Icons-plugin identifiers as card thumbnails, for example
+  `thumbnail="icon:iso7010:m003?64"`, with fixed-size browser icons and local SVG
+  images in PDF exports. Existing image thumbnails retain their syntax.
+- Keep card grids readable by wrapping cards before they become too narrow;
+  preserve icon sizes and whole footer words. Allow edit wrappers to grow around
+  their edit buttons so they do not cause vertical scrolling.
+- Improve responsive callout icon spacing and add more space below callout titles
+  in browser and PDF output.
+
+Existing settings and content are unchanged. No user stylesheet, development
+pages, media, templates or databases are included.
+
+
 ## 0.1.10 — 2026-11-05
 
 - Bundle the maintained DW2PDF fork with templates in persistent

@@ -21,7 +21,12 @@
   },
   {
     "component": "bootswrapper",
-    "result": "verified"
+    "result": "verified",
+    "release": "0.1.11",
+    "commit": "1f58112a50b187f497728aba9c0c361081810464",
+    "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/1f58112a50b187f497728aba9c0c361081810464",
+    "archive_sha256": "9e8d60f2daa1690889827e0815950b0da87e0556eb67ae2521562aed901ec905",
+    "tree_sha256": "805356a93c36708baac08fe0ec5bb2ffd276a3cfa6fc40aff93c149941eb8f02"
   },
   {
     "component": "bureaucracy",

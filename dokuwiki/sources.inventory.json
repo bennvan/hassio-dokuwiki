@@ -49,13 +49,13 @@
     },
     {
       "path": "lib/plugins/bootswrapper",
-      "tree_sha256": "d8746d91ef66de3fad25ac554858f661f9a90c4310ccd00f58e6c07255fb19d3",
+      "tree_sha256": "805356a93c36708baac08fe0ec5bb2ffd276a3cfa6fc40aff93c149941eb8f02",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-bootswrapper.git",
-      "commit": "9246efef94d4d968725f103bf047833536eb15d2",
+      "commit": "1f58112a50b187f497728aba9c0c361081810464",
       "worktree_clean": true,
       "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/9246efef94d4d968725f103bf047833536eb15d2",
-      "archive_sha256": "33312dd0df0e94f9a2bc97ab980c26426a992ffd532e08001b6eefc7073cf378"
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/1f58112a50b187f497728aba9c0c361081810464",
+      "archive_sha256": "9e8d60f2daa1690889827e0815950b0da87e0556eb67ae2521562aed901ec905"
     },
     {
       "path": "lib/plugins/bureaucracy",
@@ -162,10 +162,10 @@
       "tree_sha256": "9221cda5d084f4ab81676a356fd2a1906a8f348c4e949bda936dc2d33d85967d",
       "source_hint": "https://github.com/oiv/denyactions/archive/master.zip",
       "status": "verified",
-      "repository": "https://github.com/oiv/denyactions.git",
-      "commit": "f6a1742fd106323d3240fadec3786dc69e3e7558",
       "archive_url": "https://api.github.com/repos/oiv/denyactions/zipball/f6a1742fd106323d3240fadec3786dc69e3e7558",
-      "archive_sha256": "fa684eb0a5899177255f3fc169df9bc8b4a9b086a6f439d6df43b5ed1834b854"
+      "archive_sha256": "fa684eb0a5899177255f3fc169df9bc8b4a9b086a6f439d6df43b5ed1834b854",
+      "repository": "https://github.com/oiv/denyactions.git",
+      "commit": "f6a1742fd106323d3240fadec3786dc69e3e7558"
     },
     {
       "path": "lib/plugins/diagrams",

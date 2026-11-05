@@ -22,7 +22,7 @@ def docker(*args, stdin=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--image', default='hassio-dokuwiki:0.1.10')
+    parser.add_argument('--image', default='hassio-dokuwiki:0.1.11')
     args = parser.parse_args()
     name = 'dokuwiki-smoke-' + uuid.uuid4().hex[:10]
     volume = name + '-share'
