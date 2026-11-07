@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.14 — 2026-11-07
+
+- Restore equal-height cards within each grid row, stretching thumbnail-card
+  footers to fill the remaining space while keeping section-edit buttons clear.
+- Preserve responsive card wrapping and minimum widths.
+
+Existing settings and content are unchanged.
+
 ## 0.1.13 — 2026-11-05
 
 - Use the configured wiki title in contributor email subjects, in both the
