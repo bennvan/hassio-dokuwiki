@@ -124,3 +124,10 @@ backup mode alone does not coordinate a separately backed-up Share folder.
 Restore the Share folder and add-on together. Local Docker tests cover restoring
 stopped wiki storage into a new volume; Home Assistant Supervisor backup/restore
 still needs platform verification for this initial release.
+
+## SPLRegistry
+
+SPLRegistry is bundled but disabled by default on both fresh installations and
+updates. Enable it in Extension Manager when using the SPL Registry integration.
+An explicit enabled/disabled choice in persistent configuration takes precedence
+over this default. Its Tag, Approve and SQLite dependencies are already bundled.

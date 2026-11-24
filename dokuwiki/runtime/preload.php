@@ -15,6 +15,8 @@ foreach ($config_cascade as $name => &$cascade) {
     unset($path);
 }
 unset($cascade);
+// Optional bundled plugins stay disabled unless enabled in persistent settings.
+$config_cascade['plugins']['default'][] = '/opt/dokuwiki-runtime/plugins.default.php';
 $config_cascade['plugins']['protected'] = [
     '/opt/dokuwiki-defaults/conf/plugins.required.php',
     DOKU_CONF . 'plugins.protected.php',

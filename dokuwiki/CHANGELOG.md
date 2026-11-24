@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.15 — 2026-11-24
+
+- Darken BootsWrapper light badges to `#ebebeb`.
+- Bundle SPLRegistry, disabled by default on fresh installs and upgrades; owners
+  can enable it through Extension Manager. Explicit existing choices are preserved.
+
+Existing settings and content are unchanged. No development pages, media or
+registry data are included.
+
 ## 0.1.14 — 2026-11-07
 
 - Restore equal-height cards within each grid row, stretching thumbnail-card

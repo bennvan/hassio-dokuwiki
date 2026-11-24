@@ -49,13 +49,13 @@
     },
     {
       "path": "lib/plugins/bootswrapper",
-      "tree_sha256": "f53a332d55c4c9c6c599a9fc4f591c1ff4a275d162cc67c894b3382a823723aa",
+      "tree_sha256": "5d1eb48034a1cfbbaddd21855bc9200bf5c6ee164b1761e3204cd867c79f4dd0",
       "repository": "https://github.com/bennvan/dokuwiki-plugin-bootswrapper.git",
-      "commit": "c4eb03151d7e48aae849bbc7d6cb587ed7cbd03d",
+      "commit": "39937e8239d17e27421ac9b5c194a048fda3fe17",
       "worktree_clean": true,
-      "status": "verified",
-      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/c4eb03151d7e48aae849bbc7d6cb587ed7cbd03d",
-      "archive_sha256": "6afac85b844358a85550abaa4745d5c887a24c61e573d083bcd754d64f124ffe"
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/bennvan/dokuwiki-plugin-bootswrapper/zipball/39937e8239d17e27421ac9b5c194a048fda3fe17",
+      "archive_sha256": "414de3bb591431a95c6abed9d428dcb87a872b508b34b0b5296b287f687eed65"
     },
     {
       "path": "lib/plugins/bureaucracy",
@@ -396,6 +396,16 @@
       "archive_sha256": "a395c61f2c712e073357d96debf6f6a81f8847470924dd40d0600ac898d99990",
       "repository": "https://github.com/splitbrain/dokuwiki-plugin-smtp.git",
       "commit": "2edfd0d1fc85de54f242e383bf92499393bf65fd"
+    },
+    {
+      "path": "lib/plugins/splregistry",
+      "tree_sha256": "21d06d5de01df549a57bf415982051f0ea235ad15863eb18be947df77970d024",
+      "repository": "https://github.com/sydneypropulsionlab/dokuwiki-plugin-splregistry.git",
+      "commit": "7d60f5be8083a45b59e2fa14b4e91b5bb052d80a",
+      "worktree_clean": true,
+      "status": "archive-verified-against-installed-code",
+      "archive_url": "https://api.github.com/repos/sydneypropulsionlab/dokuwiki-plugin-splregistry/zipball/7d60f5be8083a45b59e2fa14b4e91b5bb052d80a",
+      "archive_sha256": "9ac3ba0132f6f49caee741399300a9fa9fb966a170d07126aa101f068b537ab2"
     },
     {
       "path": "lib/plugins/sqlite",
